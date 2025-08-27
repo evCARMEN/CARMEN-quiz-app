@@ -142,3 +142,13 @@ main{max-width:900px; margin: 18px auto; padding: 0 12px}
   .answer-btn{font-size:1rem}
 }
 .hidden{display:none !important}
+
+/* Browser immer in Light Mode zwingen */
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+}
