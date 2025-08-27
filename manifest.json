@@ -1,0 +1,20 @@
+{
+  "name": "C.A.R.M.E.N. - Quiz",
+  "short_name": "Carmen-Quiz",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#317EFB",
+  "icons": [
+    {
+      "src": "CARMEN_Boller.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "CARMEN_Boller.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

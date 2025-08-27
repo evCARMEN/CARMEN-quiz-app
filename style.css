@@ -1,0 +1,144 @@
+/* ===============
+   C.A.R.M.E.N. Quiz – Styles
+   CI: Century Gothic, Hauptgrün #18470F
+   =============== */
+:root{
+  --carmen-green: #18470F;
+  --wind: #2F52A0;
+  --sun: #97a9d0;
+  --heat: #cbd4e7;
+  --eff:  #e0e5f1;
+  --biogas:#65B32E;
+  --wood: #E74011;
+  --mat:  #822A3A;
+  --sust: #DEDC00;
+
+  --bg: #f6f7f6;
+  --text: #1b1b1b;
+  --muted:#667;
+  --ok: #65B32E;
+  --bad:#E74011;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--carmen-green);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.app-header{
+  background: var(--carmen-green);
+  color: #fff;
+  text-align:center;
+  padding: 18px 12px 22px;
+}
+.logo{height:80px; display:block; margin:0 auto 8px}
+h1{margin:0;font-weight:700;letter-spacing:.3px}
+.subtitle{margin:6px 0 0; color:#dfeadd}
+
+main{max-width:900px; margin: 18px auto; padding: 0 12px}
+.card{
+  background:#fff;
+  border-radius:18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.06);
+  padding:20px;
+  margin-bottom:16px;
+}
+
+.mode-grid{
+  display:flex;
+  justify-content:center;
+}
+.btn{
+  appearance:none;
+  border:none;
+  border-radius:14px;
+  padding:14px 18px;
+  font-weight:700;
+  cursor:pointer;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,.06);
+}
+.btn:hover{transform: translateY(-1px)}
+.btn:active{transform: translateY(0)}
+.btn.mode{background: var(--wind); color:#fff}
+.btn.primary{background: var(--carmen-green); color:#fff}
+.btn.secondary{background: #2F52A0; color:#fff}
+.btn.random{background:#444; color:#fff; width:220px; margin-top:10px}
+
+.hint{color: var(--muted); margin-top:10px}
+
+.category-grid{
+  display:grid;
+  gap:10px;
+  grid-template-columns: repeat(2,minmax(160px,1fr));
+}
+.category-btn{
+  color:#fff;
+  padding:14px;
+  text-align:center;
+  border-radius:14px;
+  font-weight:700;
+  cursor:pointer;
+  border:none;
+}
+
+.wheel-wrapper{display:flex; align-items:center; flex-direction:column; margin-top:14px}
+.wheel{
+  width:220px; height:220px; border-radius:50%;
+  background: conic-gradient(var(--wind) 0 45deg, var(--sun) 45deg 90deg, var(--heat) 90deg 135deg, var(--eff) 135deg 180deg, var(--biogas) 180deg 225deg, var(--wood) 225deg 270deg, var(--mat) 270deg 315deg, var(--sust) 315deg 360deg);
+  position:relative;
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+}
+.wheel::after{
+  content:''; position:absolute; left:50%; top:-14px; transform:translateX(-50%);
+  width:0; height:0; border-left:10px solid transparent; border-right:10px solid transparent; border-bottom:14px solid #222;
+}
+
+.quiz-header{display:flex; justify-content:space-between; align-items:center; gap:12px}
+#quiz-title{margin:0}
+#progress{font-weight:700; color:#222}
+
+.question{font-size:1.25rem; margin:10px 0 8px}
+.answers{display:flex; flex-direction:column; gap:10px}
+.answer-btn{
+  width:100%;
+  text-align:left;
+  padding:14px;
+  background:#f0f3f0;
+  color:#222;
+  border-radius:12px;
+  border:2px solid transparent;
+  cursor:pointer;
+  transition: transform .12s ease, background .12s ease, border-color .12s ease;
+}
+.answer-btn:hover{transform: translateY(-1px)}
+
+.answer-btn.correct{background:#e9f7ec; border-color: var(--ok)}
+.answer-btn.wrong{background:#fdecea; border-color: var(--bad)}
+
+.feedback{font-weight:700; margin-top:8px}
+.feedback.ok{color: var(--ok)}
+.feedback.bad{color: var(--bad)}
+.source{margin-top:8px; font-size:.95rem}
+.source a{color: var(--carmen-green); font-weight:700; text-decoration:none}
+.source a:hover{text-decoration:underline}
+
+.controls{display:flex; justify-content:space-between; margin-top:12px}
+
+.app-footer{
+  text-align:center; color:#556; padding:16px 8px 28px
+}
+
+/* Responsive */
+@media (max-width:700px){
+  .mode-grid{grid-template-columns: 1fr}
+  .category-grid{grid-template-columns: 1fr}
+  .wheel{width:200px;height:200px}
+  .answer-btn{font-size:1rem}
+}
+.hidden{display:none !important}

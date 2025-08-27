@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>C.A.R.M.E.N. Quiz-App</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#317EFB">
+</head>
+<body>
+  <header class="app-header">
+    <img src="CARMEN_transparent.png" alt="C.A.R.M.E.N. e.V. Logo" class="logo" />
+    <h1>C.A.R.M.E.N. Quiz-App</h1>
+    <p class="subtitle">Erneuerbare Energien & Nachwachsende Rohstoffe</p>
+  </header>
+
+  <main>
+    <!-- Modus-Auswahl -->
+  <section id="mode-selection" class="card">
+  <h2>Quiz starten</h2>
+  <div class="mode-grid">
+    <button class="btn mode" id="start-quiz-btn">Jetzt starten</button>
+  </div>
+  <p class="hint">Wähle danach eine Kategorie aus, um das Quiz zu beginnen.</p>
+</section>
+
+    <!-- Kategorien-Auswahl -->
+    <section id="category-selection" class="card hidden">
+      <h2>Kategorie wählen</h2>
+      <div id="category-buttons" class="category-grid"></div>
+
+      <div class="wheel-wrapper">
+        <div class="wheel" id="wheel"></div>
+        <button class="btn random" id="spin-btn">🎡 Zufallskategorie</button>
+      </div>
+      <p class="hint">Tipp: Probier das Glücksrad für eine zufällige Kategorie!</p>
+    </section>
+
+    <!-- Quizbereich -->
+    <section id="quiz" class="card hidden">
+      <div class="quiz-header">
+        <h2 id="quiz-title"></h2>
+        <div id="progress"></div>
+      </div>
+
+      <div id="question" class="question"></div>
+      <div id="answers" class="answers"></div>
+      <div id="feedback" class="feedback"></div>
+      <div id="source" class="source"></div>
+      <div class="controls">
+        <button class="btn secondary" id="back-btn">Zurück</button>
+        <button class="btn primary hidden" id="next-btn">Nächste Frage</button>
+      </div>
+    </section>
+
+    <!-- Ergebnis -->
+    <section id="result" class="card hidden">
+      <h2>Auswertung</h2>
+      <p id="score"></p>
+      <div id="breakdown"></div>
+      <button class="btn primary" id="restart-btn">🔄 Neues Quiz</button>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <small> &copy; C.A.R.M.E.N. e.V. – </small>
+  </footer>
+
+    <script src="script.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
+</body>
+</html>
+
