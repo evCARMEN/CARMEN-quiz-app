@@ -1301,79 +1301,40 @@ function endQuiz(){
   quizSection.classList.add('hidden');
   resultSection.classList.remove('hidden');
 
+  // Ergebnistext
   scoreEl.textContent = `Du hast ${score} von ${currentQuestions.length} Fragen richtig beantwortet.`;
 
-  breakdown.innerHTML = "";
-  const correctBar = document.createElement('div');
-  const wrongBar = document.createElement('div');
-  const total = currentQuestions.length || 1;
-  const okPct = Math.round((score/total)*100);
-  const badPct = 100 - okPct;
-  correctBar.style.cssText = `height:16px;background:#65B32E;width:${okPct}%;border-radius:8px 0 0 8px`;
-  wrongBar.style.cssText   = `height:16px;background:#E74011;width:${badPct}%;border-radius:0 8px 8px 0`;
-  const barWrap = document.createElement('div');
-  barWrap.style.cssText = 'display:flex;width:100%;background:#eef0ee;border-radius:8px;overflow:hidden;margin:8px 0 4px';
-  barWrap.appendChild(correctBar); barWrap.appendChild(wrongBar);
-  breakdown.appendChild(barWrap);
-  const label = document.createElement('div');
-  label.textContent = `${okPct}% richtig`;
-  label.style.marginTop = '6px';
-  breakdown.appendChild(label);
+  // Breakdown (falls du das schon hast, kann dieser Teil bleiben)
+  let breakdownHTML = '';
+  currentQuestions.forEach((q, i) => {
+    const isCorrect = q.userAnswer === q.correct;
+    breakdownHTML += `
+      <div class="breakdown-item ${isCorrect ? 'correct' : 'wrong'}">
+        Frage ${i+1}: ${isCorrect ? '✔️ Richtig' : '❌ Falsch'}
+      </div>
+    `;
+  });
+  breakdownEl.innerHTML = breakdownHTML;
 
-   // ---------- Zusätzliche Hinweise ----------
-const HINTS = [
-  {
-    text: "📩 Melde dich zu unserem Newsletter an!",
-    url: "https://www.carmen-ev.de/service/newsletter/"
-  },
-  {
-    text: "📅 Entdecke unseren Veranstaltungskalender",
-    url: "https://www.carmen-ev.de/c-a-r-m-e-n-veranstaltungskalender/"
-  },
-  {
-    text: "🎧 Höre die C.A.R.M.E.N.-Podcasts",
-    url: "https://www.carmen-ev.de/service/publikationen/c-a-r-m-e-n-podcasts/"
-  },
-  {
-    text: "📖 Stöbere in unseren Broschüren & Flyern",
-    url: "https://www.carmen-ev.de/service/publikationen/publikationen-broschueren-und-flyer/"
-  },
-  {
-    text: "ℹ️ Erfahre mehr über C.A.R.M.E.N. e.V.",
-    url: "https://www.carmen-ev.de/c-a-r-m-e-n-e-v/"
-  },
-  {
-    text: "📸 Folge uns auf Instagram",
-    url: "https://www.instagram.com/c.a.r.m.e.n.e.v/"
-  },
-  {
-    text: "📘 Besuche uns auf Facebook",
-    url: "https://www.facebook.com/"
-  },
-  {
-    text: "💼 Vernetze dich mit uns auf LinkedIn",
-    url: "https://de.linkedin.com/company/carmenevCentralesAgrarRohstoffMarketingundEnergieNetzwerk/?locale=de_DE"
-  },
-  {
-    text: "▶️ Abonniere unseren YouTube-Kanal",
-    url: "https://www.youtube.com/@c.a.r.m.e.n.e.v.9184"
-  }
-];
+  // ---------- Zufälligen Hinweis einfügen ----------
+  const HINTS = [
+    { text: "📩 Melde dich zu unserem Newsletter an!", url: "https://www.carmen-ev.de/service/newsletter/" },
+    { text: "📅 Entdecke unseren Veranstaltungskalender", url: "https://www.carmen-ev.de/c-a-r-m-e-n-veranstaltungskalender/" },
+    { text: "🎧 Höre die C.A.R.M.E.N.-Podcasts", url: "https://www.carmen-ev.de/service/publikationen/c-a-r-m-e-n-podcasts/" },
+    { text: "📖 Stöbere in unseren Broschüren & Flyern", url: "https://www.carmen-ev.de/service/publikationen/publikationen-broschueren-und-flyer/" },
+    { text: "ℹ️ Erfahre mehr über C.A.R.M.E.N. e.V.", url: "https://www.carmen-ev.de/c-a-r-m-e-n-e-v/" },
+    { text: "📸 Folge uns auf Instagram", url: "https://www.instagram.com/c.a.r.m.e.n.e.v/" },
+    { text: "📘 Besuche uns auf Facebook", url: "https://www.facebook.com/CentralesAgrarRohstoffMarketingundEnergieNetzwerk/?locale=de_DE" },
+    { text: "💼 Vernetze dich mit uns auf LinkedIn", url: "https://de.linkedin.com/company/carmenevCentralesAgrarRohstoffMarketingundEnergieNetzwerk/?locale=de_DE" },
+    { text: "▶️ Abonniere unseren YouTube-Kanal", url: "https://www.youtube.com/@c.a.r.m.e.n.e.v.9184" }
+  ];
 
-function endQuiz(){
-  quizSection.classList.add('hidden');
-  resultSection.classList.remove('hidden');
-
-  scoreEl.textContent = `Du hast ${score} von ${currentQuestions.length} Fragen richtig beantwortet.`;
-
-  // Breakdown-Balken usw. bleibt wie gehabt …
-
-  // --- Zufälligen Hinweis anzeigen ---
-  const hint = HINTS[Math.floor(Math.random() * HINTS.length)];
+  const randomHint = HINTS[Math.floor(Math.random() * HINTS.length)];
   const extraHintEl = document.getElementById('extra-hint');
-  extraHintEl.innerHTML = `<a href="${hint.url}" target="_blank" rel="noopener">${hint.text}</a>`;
-}
 
+  if (extraHintEl) {
+    extraHintEl.innerHTML = `<a href="${randomHint.url}" target="_blank" rel="noopener">${randomHint.text}</a>`;
+  }
 }
 
 // ---------- Utils ----------
