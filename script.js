@@ -1266,9 +1266,10 @@ function handleAnswer(btn, isCorrect, source){
     feedback.classList.add('bad');
 
     // richtige Antwort markieren
-    const correctAnswerText = currentQuestions[idx].answers.find(a => a.correct).text;
-    feedback.innerHTML += `<br>Die richtige Antwort ist: <strong>${correctAnswerText}</strong>`;
+    const correctAnswer = currentQuestions[idx].answers.find(a => a.correct);
+    feedback.innerHTML += `<br>Die richtige Antwort ist: <strong>${correctAnswer.text}</strong>`;
 
+    // Buttons markieren
     const answerButtons = [...answersEl.querySelectorAll('button')];
     answerButtons.forEach(button => {
       const a = currentQuestions[idx].answers.find(ans => ans.text === button.textContent);
@@ -1283,7 +1284,7 @@ function handleAnswer(btn, isCorrect, source){
     sourceEl.innerHTML = '';
   }
 
-  // "Nächste Frage" Button sichtbar machen
+  // Nächste Frage Button sichtbar machen
   nextBtn.classList.remove('hidden');
 }
 
