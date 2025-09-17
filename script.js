@@ -1319,6 +1319,61 @@ function endQuiz(){
   label.textContent = `${okPct}% richtig`;
   label.style.marginTop = '6px';
   breakdown.appendChild(label);
+
+   // ---------- Zusätzliche Hinweise ----------
+const HINTS = [
+  {
+    text: "📩 Melde dich zu unserem Newsletter an!",
+    url: "https://www.carmen-ev.de/service/newsletter/"
+  },
+  {
+    text: "📅 Entdecke unseren Veranstaltungskalender",
+    url: "https://www.carmen-ev.de/c-a-r-m-e-n-veranstaltungskalender/"
+  },
+  {
+    text: "🎧 Höre die C.A.R.M.E.N.-Podcasts",
+    url: "https://www.carmen-ev.de/service/publikationen/c-a-r-m-e-n-podcasts/"
+  },
+  {
+    text: "📖 Stöbere in unseren Broschüren & Flyern",
+    url: "https://www.carmen-ev.de/service/publikationen/publikationen-broschueren-und-flyer/"
+  },
+  {
+    text: "ℹ️ Erfahre mehr über C.A.R.M.E.N. e.V.",
+    url: "https://www.carmen-ev.de/c-a-r-m-e-n-e-v/"
+  },
+  {
+    text: "📸 Folge uns auf Instagram",
+    url: "https://www.instagram.com/c.a.r.m.e.n.e.v/"
+  },
+  {
+    text: "📘 Besuche uns auf Facebook",
+    url: "https://www.facebook.com/"
+  },
+  {
+    text: "💼 Vernetze dich mit uns auf LinkedIn",
+    url: "https://de.linkedin.com/company/carmenevCentralesAgrarRohstoffMarketingundEnergieNetzwerk/?locale=de_DE"
+  },
+  {
+    text: "▶️ Abonniere unseren YouTube-Kanal",
+    url: "https://www.youtube.com/@c.a.r.m.e.n.e.v.9184"
+  }
+];
+
+function endQuiz(){
+  quizSection.classList.add('hidden');
+  resultSection.classList.remove('hidden');
+
+  scoreEl.textContent = `Du hast ${score} von ${currentQuestions.length} Fragen richtig beantwortet.`;
+
+  // Breakdown-Balken usw. bleibt wie gehabt …
+
+  // --- Zufälligen Hinweis anzeigen ---
+  const hint = HINTS[Math.floor(Math.random() * HINTS.length)];
+  const extraHintEl = document.getElementById('extra-hint');
+  extraHintEl.innerHTML = `<a href="${hint.url}" target="_blank" rel="noopener">${hint.text}</a>`;
+}
+
 }
 
 // ---------- Utils ----------
