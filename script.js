@@ -1299,7 +1299,6 @@ function nextQuestion(){
   }
 }
 
-
 // ---------- Ende & Auswertung ----------
 function endQuiz(){
   quizSection.classList.add('hidden');
