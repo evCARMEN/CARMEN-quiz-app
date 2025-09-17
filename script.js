@@ -15,6 +15,9 @@ let currentQuestions = [];       // aktuell gezogene Fragen (abh. von Modus)
 let idx = 0;                     // Index der aktuellen Frage
 let score = 0;
 
+// ---------- Einstellungen ----------
+const QUESTIONS_PER_ROUND = 3;   // Anzahl Fragen pro Durchgang
+
 // ---------- Kategorien & CI-Farben ----------
 const CATS = {
   wind:  { label: "Windenergie (LandSchafftEnergie)", color: "#2F52A0" },
@@ -1132,29 +1135,21 @@ const breakdown = document.getElementById('breakdown');
 const restartBtn= document.getElementById('restart-btn');
 
 // ---------- Initialisierung ----------
-document.querySelectorAll('.btn.mode').forEach(btn => {
-  btn.addEventListener('click', () => {
-    MODE = btn.dataset.mode; // 'practice'|'test'
-    modeSection.classList.add('hidden');
-    buildCategoryButtons();
-    catSection.classList.remove('hidden');
-  });
-});
-
 backBtn.addEventListener('click', () => {
-  // Zurück zur Kategorieauswahl
   quizSection.classList.add('hidden');
   catSection.classList.remove('hidden');
 });
 
 restartBtn.addEventListener('click', () => {
   resultSection.classList.add('hidden');
-  modeSection.classList.remove('hidden');
+  catSection.classList.remove('hidden');
 });
 
 nextBtn.addEventListener('click', nextQuestion);
 
 spinBtn.addEventListener('click', spinWheel);
+
+buildCategoryButtons();
 
 // ---------- UI-Aufbau ----------
 function buildCategoryButtons(){
@@ -1192,17 +1187,11 @@ function startCategory(key){
   CURRENT_CAT_KEY = key;
   CURRENT_COLOR = CATS[key].color;
 
-  // Fragenpool kopieren & mischen
   const pool = QUESTION_BANK[key] ? [...QUESTION_BANK[key]] : [];
   shuffle(pool);
 
-  // Besonderheit: Bei App-Start 1–2 Zufallsfragen je Kategorie möglich –
-  // hier verwenden wir aber den vollen Pool und reduzieren ggf. im Testmodus:
-  if (MODE === 'test'){
-    currentQuestions = pool.slice(0, 10); // 10 Fragen für Testmodus
-  } else {
-    currentQuestions = pool; // Übungsmodus: alle verfügbaren Fragen
-  }
+  // Immer nur 3 Fragen
+  currentQuestions = pool.slice(0, QUESTIONS_PER_ROUND);
 
   idx = 0;
   score = 0;
@@ -1225,28 +1214,25 @@ function showQuestion(){
   feedback.textContent = '';
   feedback.className = 'feedback';
 
-  // Antworten zufällig mischen, damit nicht immer A korrekt ist
   const answers = shuffle([...q.answers]);
 
   answers.forEach(a => {
     const btn = document.createElement('button');
     btn.className = 'answer-btn';
     btn.textContent = a.text;
+    btn.dataset.correct = a.correct;
     btn.addEventListener('click', () => handleAnswer(btn, a.correct, q.source));
     answersEl.appendChild(btn);
   });
 
-  // Fortschritt
   progress.textContent = `Frage ${idx+1} / ${currentQuestions.length}`;
 
-  // Theme-Akzent (Answer Hover via border beim Feedback)
   nextBtn.classList.add('hidden');
   sourceEl.innerHTML = '';
 }
 
 // ---------- Antwort-Handling ----------
 function handleAnswer(btn, isCorrect, source){
-  // Buttons deaktivieren
   const all = [...answersEl.querySelectorAll('button')];
   all.forEach(b => b.disabled = true);
 
@@ -1266,23 +1252,19 @@ function handleAnswer(btn, isCorrect, source){
         button.classList.add("correct");
       }
     });
-    // Zeige die richtige Antwort im Feedback
     const correctAnswerText = getCorrectAnswerText();
     feedback.innerHTML += `<br>Die richtige Antwort ist: <strong>${correctAnswerText}</strong>`;
   }
 
-  // Quelle immer anzeigen, wenn vorhanden
   if (source) {
     sourceEl.innerHTML = `Quelle: <a href="${source}" target="_blank" rel="noopener">${source}</a>`;
   } else {
     sourceEl.innerHTML = '';
   }
 
-  // "Nächste Frage" Button immer sichtbar machen
   nextBtn.classList.remove('hidden');
 }
 
-// Hilfsfunktion, um den Text der richtigen Antwort zu bekommen
 function getCorrectAnswerText() {
   const currentQuestion = currentQuestions[idx];
   const correctAnswer = currentQuestion.answers.find(a => a.correct);
@@ -1305,13 +1287,8 @@ function endQuiz(){
   quizSection.classList.add('hidden');
   resultSection.classList.remove('hidden');
 
-  if (MODE === 'test'){
-    scoreEl.textContent = `Du hast ${score} von ${currentQuestions.length} Fragen richtig beantwortet.`;
-  } else {
-    scoreEl.textContent = `Übungsmodus beendet – richtige Antworten: ${score} von ${currentQuestions.length}.`;
-  }
+  scoreEl.textContent = `Du hast ${score} von ${currentQuestions.length} Fragen richtig beantwortet.`;
 
-  // Optionaler Breakdown (einfach)
   breakdown.innerHTML = "";
   const correctBar = document.createElement('div');
   const wrongBar = document.createElement('div');
