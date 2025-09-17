@@ -1300,12 +1300,12 @@ function nextQuestion(){
 function endQuiz(){
   quizSection.classList.add('hidden');
   resultSection.classList.remove('hidden');
-const breakdownEl = document.getElementById('breakdown');
 
-  // Ergebnistext
+  // Score
   scoreEl.textContent = `Du hast ${score} von ${currentQuestions.length} Fragen richtig beantwortet.`;
 
-  // Breakdown (falls du das schon hast, kann dieser Teil bleiben)
+  // Breakdown
+  const breakdownEl = document.getElementById('breakdown');
   let breakdownHTML = '';
   currentQuestions.forEach((q, i) => {
     const isCorrect = q.userAnswer === q.correct;
@@ -1317,7 +1317,7 @@ const breakdownEl = document.getElementById('breakdown');
   });
   breakdownEl.innerHTML = breakdownHTML;
 
-  // ---------- Zufälligen Hinweis einfügen ----------
+  // Zufälliger Hinweis
   const HINTS = [
     { text: "📩 Melde dich zu unserem Newsletter an!", url: "https://www.carmen-ev.de/service/newsletter/" },
     { text: "📅 Entdecke unseren Veranstaltungskalender", url: "https://www.carmen-ev.de/c-a-r-m-e-n-veranstaltungskalender/" },
@@ -1331,12 +1331,14 @@ const breakdownEl = document.getElementById('breakdown');
   ];
 
   const randomHint = HINTS[Math.floor(Math.random() * HINTS.length)];
-  const extraHintEl = document.getElementById('extra-hint');
+  console.log("Random Hint gewählt:", randomHint); // Debug
 
+  const extraHintEl = document.getElementById('extra-hint');
   if (extraHintEl) {
     extraHintEl.innerHTML = `<a href="${randomHint.url}" target="_blank" rel="noopener">${randomHint.text}</a>`;
   }
 }
+
 
 // ---------- Utils ----------
 function shuffle(arr){
