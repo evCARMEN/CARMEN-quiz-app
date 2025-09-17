@@ -1249,7 +1249,10 @@ function showQuestion(){
 function handleAnswer(btn, isCorrect, source){
   const all = [...answersEl.querySelectorAll('button')];
   all.forEach(b => b.disabled = true);
-
+   
+// Nutzerantwort speichern
+  currentQuestions[idx].userAnswer = isCorrect;
+// Score erhöhen 
   if (isCorrect){
     btn.classList.add('correct');
     feedback.textContent = '✅ Richtig!';
@@ -1301,14 +1304,14 @@ function endQuiz(){
   quizSection.classList.add('hidden');
   resultSection.classList.remove('hidden');
 
-  // Score
+  // Score anzeigen
   scoreEl.textContent = `Du hast ${score} von ${currentQuestions.length} Fragen richtig beantwortet.`;
 
   // Breakdown
   const breakdownEl = document.getElementById('breakdown');
   let breakdownHTML = '';
   currentQuestions.forEach((q, i) => {
-    const isCorrect = q.userAnswer === q.correct;
+    const isCorrect = q.userAnswer === true;
     breakdownHTML += `
       <div class="breakdown-item ${isCorrect ? 'correct' : 'wrong'}">
         Frage ${i+1}: ${isCorrect ? '✔️ Richtig' : '❌ Falsch'}
@@ -1331,14 +1334,11 @@ function endQuiz(){
   ];
 
   const randomHint = HINTS[Math.floor(Math.random() * HINTS.length)];
-  console.log("Random Hint gewählt:", randomHint); // Debug
-
   const extraHintEl = document.getElementById('extra-hint');
   if (extraHintEl) {
     extraHintEl.innerHTML = `<a href="${randomHint.url}" target="_blank" rel="noopener">${randomHint.text}</a>`;
   }
 }
-
 
 // ---------- Utils ----------
 function shuffle(arr){
