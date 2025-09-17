@@ -1300,6 +1300,7 @@ function nextQuestion(){
 function endQuiz(){
   quizSection.classList.add('hidden');
   resultSection.classList.remove('hidden');
+const breakdownEl = document.getElementById('breakdown');
 
   // Ergebnistext
   scoreEl.textContent = `Du hast ${score} von ${currentQuestions.length} Fragen richtig beantwortet.`;
