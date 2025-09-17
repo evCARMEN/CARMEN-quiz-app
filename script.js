@@ -1116,6 +1116,18 @@ const QUESTION_BANK = {
 // ---------- DOM-Elemente ----------
 const modeSection     = document.getElementById('mode-selection');
 const catSection      = document.getElementById('category-selection');
+// ---------- Start-Button ----------
+const startBtn = document.getElementById('start-quiz-btn');
+
+startBtn.addEventListener('click', () => {
+  // Startkarte ausblenden
+  modeSection.classList.add('hidden');
+
+  // Kategorie-Buttons aufbauen und anzeigen
+  buildCategoryButtons();
+  catSection.classList.remove('hidden');
+});
+
 const quizSection     = document.getElementById('quiz');
 const resultSection   = document.getElementById('result');
 const catButtonsWrap  = document.getElementById('category-buttons');
@@ -1187,11 +1199,12 @@ function startCategory(key){
   CURRENT_CAT_KEY = key;
   CURRENT_COLOR = CATS[key].color;
 
+  // Fragenpool kopieren & mischen
   const pool = QUESTION_BANK[key] ? [...QUESTION_BANK[key]] : [];
   shuffle(pool);
 
-  // Immer nur 3 Fragen
-  currentQuestions = pool.slice(0, QUESTIONS_PER_ROUND);
+  // Nur 3 Fragen pro Runde
+  currentQuestions = pool.slice(0, 3);
 
   idx = 0;
   score = 0;
@@ -1202,6 +1215,7 @@ function startCategory(key){
   titleEl.textContent = CATS[key].label;
   showQuestion();
 }
+
 
 // ---------- Frage rendern ----------
 function showQuestion(){
