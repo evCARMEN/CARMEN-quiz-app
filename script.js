@@ -1247,12 +1247,14 @@ function showQuestion(){
 
 // ---------- Antwort-Handling ----------
 function handleAnswer(btn, isCorrect, source){
+  // Buttons deaktivieren
   const all = [...answersEl.querySelectorAll('button')];
   all.forEach(b => b.disabled = true);
-   
-// Nutzerantwort speichern
+
+  // Nutzerantwort speichern
   currentQuestions[idx].userAnswer = isCorrect;
-// Score erhöhen 
+
+  // Score erhöhen
   if (isCorrect){
     btn.classList.add('correct');
     feedback.textContent = '✅ Richtig!';
@@ -1263,40 +1265,26 @@ function handleAnswer(btn, isCorrect, source){
     feedback.textContent = '❌ Falsch!';
     feedback.classList.add('bad');
 
+    // richtige Antwort markieren
+    const correctAnswerText = currentQuestions[idx].answers.find(a => a.correct).text;
+    feedback.innerHTML += `<br>Die richtige Antwort ist: <strong>${correctAnswerText}</strong>`;
+
     const answerButtons = [...answersEl.querySelectorAll('button')];
     answerButtons.forEach(button => {
-      if (button.dataset.correct === "true") {
-        button.classList.add("correct");
-      }
+      const a = currentQuestions[idx].answers.find(ans => ans.text === button.textContent);
+      if (a && a.correct) button.classList.add("correct");
     });
-    const correctAnswerText = getCorrectAnswerText();
-    feedback.innerHTML += `<br>Die richtige Antwort ist: <strong>${correctAnswerText}</strong>`;
   }
 
+  // Quelle anzeigen
   if (source) {
     sourceEl.innerHTML = `Quelle: <a href="${source}" target="_blank" rel="noopener">${source}</a>`;
   } else {
     sourceEl.innerHTML = '';
   }
 
+  // "Nächste Frage" Button sichtbar machen
   nextBtn.classList.remove('hidden');
-}
-
-function getCorrectAnswerText() {
-  const currentQuestion = currentQuestions[idx];
-  const correctAnswer = currentQuestion.answers.find(a => a.correct);
-  return correctAnswer ? correctAnswer.text : '';
-}
-
-
-// ---------- Nächste Frage ----------
-function nextQuestion(){
-  idx++;
-  if (idx < currentQuestions.length){
-    showQuestion();
-  } else {
-    endQuiz();
-  }
 }
 
 // ---------- Ende & Auswertung ----------
