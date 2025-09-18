@@ -317,7 +317,7 @@ link.rel = 'noopener';
 link.textContent = randomHint.text;
 
 container.appendChild(link);
-extraHintEl.appendChild(container);
+extraHintEl.appendChild(container);}
 
 // ---------- Utils ----------
 function shuffle(arr){
