@@ -45,11 +45,19 @@ const CATS = {
 // }
 let QUESTION_BANK = {};
 
-fetch("questions.json")
-  .then(res => res.json())
+fetch("https://evcarmen.github.io/CARMEN-quiz-app/questions.json")
+  .then(res => {
+    if (!res.ok) {
+      throw new Error(`HTTP error! Status: ${res.status}`);
+    }
+    return res.json();
+  })
   .then(data => {
     QUESTION_BANK = data;
-    // Rest des Quiz wie bisher
+    console.log("Fragen erfolgreich geladen:", data);
+  })
+  .catch(err => {
+    console.error("Fehler beim Laden der Fragen:", err.message);
   });
 
 // ---------- DOM-Elemente ----------
