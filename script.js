@@ -318,6 +318,7 @@ link.textContent = randomHint.text;
 
 container.appendChild(link);
 extraHintEl.appendChild(container);}
+}
 
 // ---------- Utils ----------
 function shuffle(arr){
