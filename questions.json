@@ -1,4 +1,5 @@
-"wind": [
+{
+  "wind": [
   {
     "question": "Welche Abstandsregel wird in Bayern häufig mit Windenergie verbunden?",
     "answers": [
@@ -1112,3 +1113,4 @@
     }
   ]
 };
+        }
