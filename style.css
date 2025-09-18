@@ -271,12 +271,6 @@ a:focus {
   }
 }
 
-/* Instagram-Logo Hover-Effekt */
-footer a img:hover {
-  filter: brightness(1.2);
-  transform: scale(1.05);
-  transition: all 0.3s ease;
-}
 .hint-content {
   display: flex;
   align-items: center;
