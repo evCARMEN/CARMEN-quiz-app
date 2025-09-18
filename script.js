@@ -267,24 +267,46 @@ function endQuiz(){
   });
   breakdownEl.innerHTML = breakdownHTML;
 
-  // Zufälliger Hinweis
-  const HINTS = [
-    { text: "📩 Melde dich zu unserem Newsletter an!", url: "https://www.carmen-ev.de/service/newsletter/" },
-    { text: "📅 Entdecke unseren Veranstaltungskalender", url: "https://www.carmen-ev.de/c-a-r-m-e-n-veranstaltungskalender/" },
-    { text: "🎧 Höre die C.A.R.M.E.N.-Podcasts", url: "https://www.carmen-ev.de/service/publikationen/c-a-r-m-e-n-podcasts/" },
-    { text: "📖 Stöbere in unseren Broschüren & Flyern", url: "https://www.carmen-ev.de/service/publikationen/publikationen-broschueren-und-flyer/" },
-    { text: "ℹ️ Erfahre mehr über C.A.R.M.E.N. e.V.", url: "https://www.carmen-ev.de/c-a-r-m-e-n-e-v/" },
-    { text: "📸 Folge uns auf Instagram", url: "https://www.instagram.com/c.a.r.m.e.n.e.v/" },
-    { text: "📘 Besuche uns auf Facebook", url: "https://www.facebook.com/CentralesAgrarRohstoffMarketingundEnergieNetzwerk/?locale=de_DE" },
-    { text: "💼 Vernetze dich mit uns auf LinkedIn", url: "https://de.linkedin.com/company/carmenevCentralesAgrarRohstoffMarketingundEnergieNetzwerk/?locale=de_DE" },
-    { text: "▶️ Abonniere unseren YouTube-Kanal", url: "https://www.youtube.com/@c.a.r.m.e.n.e.v.9184" }
-  ];
+ // Zufälliger Hinweis mit Logo
+const HINTS = [
+  { text: "📩 Melde dich zu unserem Newsletter an!", url: "https://www.carmen-ev.de/service/newsletter/" },
+  { text: "📅 Entdecke unseren Veranstaltungskalender", url: "https://www.carmen-ev.de/c-a-r-m-e-n-veranstaltungskalender/" },
+  { text: "🎧 Höre die C.A.R.M.E.N.-Podcasts", url: "https://www.carmen-ev.de/service/publikationen/c-a-r-m-e-n-podcasts/" },
+  { text: "📖 Stöbere in unseren Broschüren & Flyern", url: "https://www.carmen-ev.de/service/publikationen/publikationen-broschueren-und-flyer/" },
+  { text: "ℹ️ Erfahre mehr über C.A.R.M.E.N. e.V.", url: "https://www.carmen-ev.de/c-a-r-m-e-n-e-v/" },
+  { text: "📸 Folge uns auf Instagram", url: "https://www.instagram.com/c.a.r.m.e.n.e.v/" },
+  { text: "📘 Besuche uns auf Facebook", url: "https://www.facebook.com/CentralesAgrarRohstoffMarketingundEnergieNetzwerk/?locale=de_DE" },
+  { text: "💼 Vernetze dich mit uns auf LinkedIn", url: "https://de.linkedin.com/company/carmenevCentralesAgrarRohstoffMarketingundEnergieNetzwerk/?locale=de_DE" },
+  { text: "▶️ Abonniere unseren YouTube-Kanal", url: "https://www.youtube.com/@c.a.r.m.e.n.e.v.9184" }
+];
 
-  const randomHint = HINTS[Math.floor(Math.random() * HINTS.length)];
-  const extraHintEl = document.getElementById('extra-hint');
-  if (extraHintEl) {
-    extraHintEl.innerHTML = `<a href="${randomHint.url}" target="_blank" rel="noopener">${randomHint.text}</a>`;
-  }
+// Funktion zur Logo-Erkennung
+function getPlatformIcon(url) {
+  if (url.includes("instagram")) return "instagram.png";
+  if (url.includes("facebook")) return "facebook.png";
+  if (url.includes("linkedin")) return "linkedin.png";
+  if (url.includes("youtube")) return "youtube.png";
+  if (url.includes("newsletter")) return "newsletter.png";
+  if (url.includes("veranstaltungskalender")) return "calendar.png";
+  return null;
+}
+
+// Anzeige des Hinweises mit Logo
+const randomHint = HINTS[Math.floor(Math.random() * HINTS.length)];
+const extraHintEl = document.getElementById("extra-hint");
+
+if (extraHintEl) {
+  const iconFile = getPlatformIcon(randomHint.url);
+  const iconHTML = iconFile
+    ? `<img src="assets/icons/${iconFile}" alt="" class="hint-icon">`
+    : "";
+
+  extraHintEl.innerHTML = `
+    <div class="hint-content">
+      ${iconHTML}
+      <a href="${randomHint.url}" target="_blank" rel="noopener">${randomHint.text}</a>
+    </div>
+  `;
 }
 
 
