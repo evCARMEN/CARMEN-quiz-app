@@ -170,7 +170,6 @@ body {
    Darkmode deaktivieren – App immer hell anzeigen
    ====================== */
 html, body {
-  background-color: #ffffff !important;
   color: #000000 !important;
   forced-color-adjust: none !important; /* verhindert Browser-Invertierung */
 }
