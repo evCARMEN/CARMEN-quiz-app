@@ -229,3 +229,8 @@ html, body {
 .breakdown-item.wrong {
   background-color: #E74011; /* Rot */
 }
+button:focus,
+a:focus {
+  outline: 2px solid #005fcc;
+  outline-offset: 2px;
+}
