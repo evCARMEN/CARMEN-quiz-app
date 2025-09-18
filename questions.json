@@ -1,0 +1,1114 @@
+"wind": [
+  {
+    "question": "Welche Abstandsregel wird in Bayern häufig mit Windenergie verbunden?",
+    "answers": [
+      { "text": "5H-Regel", "correct": false },
+      { "text": "10H-Regel", "correct": true },
+      { "text": "2H-Regel", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  },
+  {
+    "question": "Welche Hauptkomponente einer Windenergieanlage ist gut recycelbar?",
+    "answers": [
+      { "text": "Stahl des Turms", "correct": true },
+      { "text": "Generatoröl", "correct": false },
+      { "text": "Rotorblatt-Verbundkunststoffe", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  },
+  {
+    "question": "Wie lange beträgt die typische Lebensdauer moderner Windenergieanlagen?",
+    "answers": [
+      { "text": "20–25 Jahre", "correct": true },
+      { "text": "5–10 Jahre", "correct": false },
+      { "text": "40–50 Jahre", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  },
+  {
+    "question": "Was bestimmt maßgeblich den Energieertrag von Windanlagen?",
+    "answers": [
+      { "text": "Rotorlackierung", "correct": false },
+      { "text": "Windangebot bzw. Standortqualität", "correct": true },
+      { "text": "Turmfarbe", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  },
+  {
+    "question": "Welche Bauform ist bei modernen Windenergieanlagen üblich?",
+    "answers": [
+      { "text": "Horizontalläufer", "correct": true },
+      { "text": "Vertikalläufer", "correct": false },
+      { "text": "Schaufelrad", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  },
+  {
+    "question": "Welche Anlagenleistung haben heutige Windenergieanlagen an Land typischerweise?",
+    "answers": [
+      { "text": "3–6 Megawatt", "correct": true },
+      { "text": "50–100 Kilowatt", "correct": false },
+      { "text": "20–30 Megawatt", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  },
+  {
+    "question": "Welches Bundesland ist führend beim Ausbau der Windenergie in Deutschland?",
+    "answers": [
+      { "text": "Niedersachsen", "correct": true },
+      { "text": "Bayern", "correct": false },
+      { "text": "Saarland", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  },
+  {
+    "question": "Welche Art von Genehmigung wird für Windenergieanlagen in Deutschland benötigt?",
+    "answers": [
+      { "text": "Genehmigung nach Bundesimmissionsschutzgesetz (BImSchG)", "correct": true },
+      { "text": "Baugenehmigung vom Landratsamt", "correct": false },
+      { "text": "Konzession der Bundesnetzagentur", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  },
+  {
+    "question": "Was versteht man unter der Nabenhöhe einer Windenergieanlage?",
+    "answers": [
+      { "text": "Höhe der Gondelachse über dem Boden", "correct": true },
+      { "text": "Gesamthöhe bis Rotorblattspitze", "correct": false },
+      { "text": "Turmhöhe ohne Fundament", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  },
+  {
+    "question": "Was ist eine typische Ursache für Widerstand gegen Windenergieprojekte?",
+    "answers": [
+      { "text": "Befürchtungen wegen Landschaftsbild und Lärm", "correct": true },
+      { "text": "Fehlende Windgeschwindigkeit", "correct": false },
+      { "text": "Mangelnde Netzanschlussmöglichkeit", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  },
+  {
+    "question": "Welche Rolle spielt Repowering bei der Windenergie?",
+    "answers": [
+      { "text": "Ersetzen alter Anlagen durch neue, leistungsstärkere", "correct": true },
+      { "text": "Verstärkung von Rotorblättern mit Metall", "correct": false },
+      { "text": "Zusätzliche Schmierung der Generatoren", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  },
+  {
+    "question": "Welche Naturgefahr muss beim Bau von Windenergieanlagen berücksichtigt werden?",
+    "answers": [
+      { "text": "Eiswurf von Rotorblättern", "correct": true },
+      { "text": "Überschwemmungen", "correct": false },
+      { "text": "Vulkanausbrüche", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  },
+  {
+    "question": "Welche Lebensdauer haben Rotorblätter im Durchschnitt?",
+    "answers": [
+      { "text": "20–25 Jahre", "correct": true },
+      { "text": "5 Jahre", "correct": false },
+      { "text": "40 Jahre", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  },
+  {
+    "question": "Welcher Teil einer Windenergieanlage enthält den Generator?",
+    "answers": [
+      { "text": "Die Gondel", "correct": true },
+      { "text": "Der Rotor", "correct": false },
+      { "text": "Das Fundament", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  },
+  {
+    "question": "Welche Komponente einer Windenergieanlage ist besonders schwer recycelbar?",
+    "answers": [
+      { "text": "Rotorblätter", "correct": true },
+      { "text": "Turmfundament", "correct": false },
+      { "text": "Stahlkonstruktion", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  }
+]
+
+
+
+
+
+
+
+"sun": [
+  {
+    "question": "Welche Technologie wandelt Sonnenlicht direkt in Strom um?",
+    "answers": [
+      { "text": "Solarthermie", "correct": false },
+      { "text": "Photovoltaik", "correct": true },
+      { "text": "Biophotonik", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/sonnenenergie/photovoltaik/"
+  },
+  {
+    "question": "Was verbessert den Eigenverbrauch bei PV-Anlagen im Haushalt?",
+    "answers": [
+      { "text": "Batteriespeicher", "correct": true },
+      { "text": "Kleinere Module", "correct": false },
+      { "text": "Weiße Dachziegel", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/sonnenenergie/photovoltaik/"
+  },
+  {
+    "question": "Wofür wird Solarthermie primär genutzt?",
+    "answers": [
+      { "text": "Zur Wärmeerzeugung, z. B. für Warmwasser", "correct": true },
+      { "text": "Zur Stromerzeugung", "correct": false },
+      { "text": "Zur direkten Kühlung mit Kaltluft", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/sonnenenergie/solarthermie/"
+  },
+  {
+    "question": "Welche Bauart ist bei Photovoltaikmodulen heute am weitesten verbreitet?",
+    "answers": [
+      { "text": "Kristalline Siliziummodule", "correct": true },
+      { "text": "Organische Module", "correct": false },
+      { "text": "Galliumarsenid-Module", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/sonnenenergie/photovoltaik/"
+  },
+  {
+    "question": "Welche Einheit wird zur Leistungsmessung von PV-Anlagen genutzt?",
+    "answers": [
+      { "text": "Kilowattpeak (kWp)", "correct": true },
+      { "text": "Kilowattstunden (kWh)", "correct": false },
+      { "text": "Newtonmeter", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/sonnenenergie/photovoltaik/"
+  },
+  {
+    "question": "Welche gesetzliche Grundlage regelt die Einspeisevergütung für Solarstrom in Deutschland?",
+    "answers": [
+      { "text": "Das Erneuerbare-Energien-Gesetz (EEG)", "correct": true },
+      { "text": "Das Bundesimmissionsschutzgesetz (BImSchG)", "correct": false },
+      { "text": "Das Baugesetzbuch (BauGB)", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/sonnenenergie/photovoltaik/"
+  },
+  {
+    "question": "Was ist ein typisches Einsatzgebiet für solarthermische Anlagen?",
+    "answers": [
+      { "text": "Warmwasserbereitung und Heizungsunterstützung", "correct": true },
+      { "text": "Stromerzeugung in Haushalten", "correct": false },
+      { "text": "Kühlung von Lebensmitteln", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/sonnenenergie/solarthermie/"
+  },
+  {
+    "question": "Welche Nachführung steigert den Ertrag von Photovoltaikanlagen?",
+    "answers": [
+      { "text": "Eine Nachführung zur Sonne", "correct": true },
+      { "text": "Eine Nachführung zum Wind", "correct": false },
+      { "text": "Eine Nachführung zur Erdrotation", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/sonnenenergie/photovoltaik/"
+  },
+  {
+    "question": "Welche typische Lebensdauer haben PV-Module?",
+    "answers": [
+      { "text": "20–30 Jahre", "correct": true },
+      { "text": "5–10 Jahre", "correct": false },
+      { "text": "50 Jahre", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/sonnenenergie/photovoltaik/"
+  },
+  {
+    "question": "Welche Funktion haben Wechselrichter bei PV-Anlagen?",
+    "answers": [
+      { "text": "Sie wandeln Gleichstrom in Wechselstrom um", "correct": true },
+      { "text": "Sie verstärken die Sonneneinstrahlung", "correct": false },
+      { "text": "Sie speichern die Energie", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/sonnenenergie/photovoltaik/"
+  },
+  {
+    "question": "Welches Dach eignet sich am besten für Photovoltaikanlagen?",
+    "answers": [
+      { "text": "Ein Süddach mit Neigung", "correct": true },
+      { "text": "Ein Flachdach mit Nordausrichtung", "correct": false },
+      { "text": "Ein Dach mit Schatten durch Bäume", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/sonnenenergie/photovoltaik/"
+  },
+  {
+    "question": "Was beschreibt die Globalstrahlung?",
+    "answers": [
+      { "text": "Die gesamte auf die Erdoberfläche treffende Sonneneinstrahlung", "correct": true },
+      { "text": "Nur die direkte Sonneneinstrahlung", "correct": false },
+      { "text": "Nur die reflektierte Strahlung", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/sonnenenergie/solarthermie/"
+  },
+  {
+    "question": "Wie können PV-Anlagen auch nach Ablauf der EEG-Förderung genutzt werden?",
+    "answers": [
+      { "text": "Für Eigenverbrauch und Direktvermarktung", "correct": true },
+      { "text": "Gar nicht mehr, sie müssen abgeschaltet werden", "correct": false },
+      { "text": "Nur zur Notstromversorgung", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/sonnenenergie/photovoltaik/"
+  },
+  {
+    "question": "Welche Speichertechnologie wird häufig mit PV kombiniert?",
+    "answers": [
+      { "text": "Lithium-Ionen-Batterien", "correct": true },
+      { "text": "Bleibenzin-Tanks", "correct": false },
+      { "text": "Druckluftspeicher im Haus", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/sonnenenergie/photovoltaik/"
+  },
+  {
+    "question": "Welcher Vorteil entsteht durch Kombination von PV und Solarthermie?",
+    "answers": [
+      { "text": "Sowohl Strom- als auch Wärmeerzeugung", "correct": true },
+      { "text": "Verdoppelung der Stromleistung", "correct": false },
+      { "text": "Unbegrenzte Speicherfähigkeit", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/sonnenenergie/"
+  }
+]
+
+
+
+
+
+
+
+"heat": [
+  {
+    "question": "Welches System nutzt Umweltenergie aus der Luft, dem Erdreich oder dem Wasser?",
+    "answers": [
+      { "text": "Wärmepumpe", "correct": true },
+      { "text": "Ölheizung", "correct": false },
+      { "text": "Pelletkaminofen", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/umweltwaerme/"
+  },
+  {
+    "question": "Welche Kenngröße ist bei Wärmepumpen entscheidend?",
+    "answers": [
+      { "text": "COP bzw. Jahresarbeitszahl (JAZ)", "correct": true },
+      { "text": "PS-Zahl", "correct": false },
+      { "text": "Brennwert (Hs)", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/umweltwaerme/"
+  },
+  {
+    "question": "Welche Wärmequelle eignet sich für Erdsondenanlagen?",
+    "answers": [
+      { "text": "Erdreich", "correct": true },
+      { "text": "Dieselkraftstoff", "correct": false },
+      { "text": "Holzkohle", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/umweltwaerme/"
+  },
+  {
+    "question": "Welche Energiequelle nutzen Luft-Wärmepumpen?",
+    "answers": [
+      { "text": "Die Umgebungsluft", "correct": true },
+      { "text": "Motorabwärme", "correct": false },
+      { "text": "Abgase von Heizungen", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/umweltwaerme/"
+  },
+  {
+    "question": "Was beschreibt die Jahresarbeitszahl (JAZ) einer Wärmepumpe?",
+    "answers": [
+      { "text": "Das Verhältnis von abgegebener Wärme zu eingesetztem Strom", "correct": true },
+      { "text": "Die maximale Temperatur im Heizkreis", "correct": false },
+      { "text": "Die durchschnittliche Außentemperatur", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/umweltwaerme/"
+  },
+  {
+    "question": "Welche Art von Wärmepumpe nutzt Grundwasser?",
+    "answers": [
+      { "text": "Wasser-Wasser-Wärmepumpe", "correct": true },
+      { "text": "Sole-Luft-Wärmepumpe", "correct": false },
+      { "text": "Gaswärmepumpe", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/umweltwaerme/"
+  },
+  {
+    "question": "Welches Heizsystem kann mit einer Wärmepumpe besonders effizient betrieben werden?",
+    "answers": [
+      { "text": "Fußbodenheizung", "correct": true },
+      { "text": "Elektroheizlüfter", "correct": false },
+      { "text": "Ölkonvektoren", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/umweltwaerme/"
+  },
+  {
+    "question": "Was ist eine wichtige Voraussetzung für effiziente Wärmepumpennutzung?",
+    "answers": [
+      { "text": "Ein gut gedämmtes Gebäude", "correct": true },
+      { "text": "Ein hoher Ölverbrauch", "correct": false },
+      { "text": "Ein Kaminanschluss", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/umweltwaerme/"
+  },
+  {
+    "question": "Welche Energiequelle steht Wärmepumpen unabhängig von der Jahreszeit zur Verfügung?",
+    "answers": [
+      { "text": "Das Erdreich", "correct": true },
+      { "text": "Die Außenluft", "correct": false },
+      { "text": "Das Sonnenlicht", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/umweltwaerme/"
+  },
+  {
+    "question": "Was ist ein Vorteil von Wärmepumpen für den Klimaschutz?",
+    "answers": [
+      { "text": "Sie verursachen keine lokalen CO₂-Emissionen", "correct": true },
+      { "text": "Sie erzeugen Strom aus Abwärme", "correct": false },
+      { "text": "Sie benötigen kein Stromnetz", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/umweltwaerme/"
+  },
+  {
+    "question": "Welche Fördermöglichkeit gibt es für Wärmepumpen in Deutschland?",
+    "answers": [
+      { "text": "Bundesförderung für effiziente Gebäude (BEG)", "correct": true },
+      { "text": "Mineralölsteuer-Rabatte", "correct": false },
+      { "text": "Subventionen für Kohlekraftwerke", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/umweltwaerme/"
+  },
+  {
+    "question": "Welche Rolle spielt der COP-Wert bei Wärmepumpen?",
+    "answers": [
+      { "text": "Er beschreibt das Verhältnis von Wärmeleistung zu Stromaufnahme", "correct": true },
+      { "text": "Er gibt die Größe des Geräts an", "correct": false },
+      { "text": "Er ist ein Maß für den CO₂-Ausstoß", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/umweltwaerme/"
+  },
+  {
+    "question": "Welche Quelle kann für oberflächennahe Geothermie erschlossen werden?",
+    "answers": [
+      { "text": "Das Erdreich mit Flächenkollektoren", "correct": true },
+      { "text": "Das Hochgebirge", "correct": false },
+      { "text": "Die Atmosphäre in großer Höhe", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/umweltwaerme/"
+  },
+  {
+    "question": "Welche Funktion kann eine Wärmepumpe im Sommer zusätzlich übernehmen?",
+    "answers": [
+      { "text": "Kühlen von Gebäuden", "correct": true },
+      { "text": "Gasverbrennung", "correct": false },
+      { "text": "Solarstromerzeugung", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/umweltwaerme/"
+  },
+  {
+    "question": "Was ist der Unterschied zwischen aktiver und passiver Kühlung mit Wärmepumpen?",
+    "answers": [
+      { "text": "Aktive Kühlung nutzt den Verdichter, passive nur die Umweltwärmequelle", "correct": true },
+      { "text": "Passive Kühlung verbraucht mehr Strom", "correct": false },
+      { "text": "Aktive Kühlung funktioniert ohne Wärmepumpe", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/infothek/umweltwaerme/"
+  }
+]
+
+
+
+
+
+
+ "eff": [
+    {
+      question: "Welche Maßnahme spart typischerweise am meisten Heizenergie im Altbau?",
+      answers: [
+        { text: "Dämmung der Gebäudehülle und hydraulischer Abgleich", correct: true },
+        { text: "Thermostatfarbe", correct: false },
+        { text: "Fensteraufkleber", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-effizienz/"
+    },
+    {
+      question: "Was beschreibt der U‑Wert eines Bauteils?",
+      answers: [
+        { text: "Den Wärmedurchgang eines Bauteils", correct: true },
+        { text: "Die elektrische Leitfähigkeit", correct: false },
+        { text: "Die Luftdichtigkeit", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-effizienz/"
+    },
+    {
+      question: "Welche Beleuchtung ist energieeffizient?",
+      answers: [
+        { text: "LED", correct: true },
+        { text: "Halogenlampen", correct: false },
+        { text: "Glühlampen", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-effizienz/"
+    },
+    {
+      question: "Was bedeutet Suffizienz im energetischen Kontext?",
+      answers: [
+        { text: "Notwendigen Energieverbrauch vermeiden bzw. reduzieren", correct: true },
+        { text: "Ausschließlich effizientere Technik kaufen", correct: false },
+        { text: "Mehr Energie produzieren", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-effizienz/"
+    },
+    {
+      question: "Was ist der Rebound‑Effekt?",
+      answers: [
+        { text: "Teilweise höherer Energieverbrauch durch nachlässigeres Verhalten trotz Effizienzgewinnen", correct: true },
+        { text: "Ein Effizienzlabel für Haushaltsgeräte", correct: false },
+        { text: "Ein staatliches Förderprogramm", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-effizienz/"
+    },
+    {
+      question: "Welche einfache Maßnahme reduziert Standby‑Verluste bei Geräten?",
+      answers: [
+        { text: "Ausschaltbare Steckerleisten bzw. Geräte komplett vom Netz trennen", correct: true },
+        { text: "Geräte dauerhaft im Standby lassen", correct: false },
+        { text: "Immer die höchste Leistungsstufe nutzen", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-effizienz/"
+    },
+    {
+      question: "Welche Reihenfolge beschreibt den Energie‑3‑Sprung korrekt?",
+      answers: [
+        { text: "1) Bedarf senken, 2) Effizienz steigern, 3) Erneuerbare Energien ausbauen", correct: true },
+        { text: "1) Erneuerbare ausbauen, 2) Effizienz, 3) Bedarf erhöhen", correct: false },
+        { text: "1) Effizienz, 2) Bedarf steigern, 3) Export erhöhen", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-effizienz/"
+    },
+    {
+      question: "Welche Energieeffizienzklassen werden seit der Umstellung (ab 2021) wieder verwendet?",
+      answers: [
+        { text: "Klassen A bis G", correct: true },
+        { text: "A+++ bis D", correct: false },
+        { text: "Skala 1–10", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-effizienz/"
+    },
+    {
+      question: "Wieviel Anteil hat Waschen & Trocknen näherungsweise am Haushaltsenergieverbrauch?",
+      answers: [
+        { text: "Ca. 13 %", correct: true },
+        { text: "Ca. 50 %", correct: false },
+        { text: "Ca. 2 %", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-effizienz/"
+    },
+    {
+      question: "Was ist ein zentraler Hebel zur Senkung des Energiebedarfs in Gebäuden?",
+      answers: [
+        { text: "Verbesserte Dämmung und Einbau effizienter Haustechnik", correct: true },
+        { text: "Mehr elektrische Zusatzheizungen", correct: false },
+        { text: "Weniger Fenster für bessere Belüftung", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-effizienz/"
+    },
+    {
+      question: "Was macht ein hydraulischer Abgleich?",
+      answers: [
+        { text: "Er stellt sicher, dass Wärme gleichmäßig und effizient im Heizsystem verteilt wird", correct: true },
+        { text: "Er misst die Luftfeuchtigkeit", correct: false },
+        { text: "Er kontrolliert den Stromverbrauch der Pumpe nicht", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-effizienz/"
+    },
+    {
+      question: "Welcher Tipp hilft sofort beim Stromsparen im Haushalt?",
+      answers: [
+        { text: "Ausschalten statt Standby und energieeffiziente Geräte wählen", correct: true },
+        { text: "Mehr Geräte anschaffen", correct: false },
+        { text: "Alle Lichter permanent anlassen", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-effizienz/"
+    },
+    {
+      question: "Warum ist richtiges Lüften wichtig für Energieeffizienz?",
+      answers: [
+        { text: "Es verhindert Feuchte‑ und Schimmelprobleme und reduziert Wärmeverluste bei stoßweisem Lüften", correct: true },
+        { text: "Es erhöht immer den Energiebedarf drastisch", correct: false },
+        { text: "Es ersetzt vollständig Dämmmaßnahmen", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-effizienz/"
+    },
+    {
+      question: "Welcher Ansatz reduziert Energiebedarf langfristig am stärksten?",
+      answers: [
+        { text: "Gebäudemodernisierung (Dämmung, Fenster, Heizungssanierung)", correct: true },
+        { text: "Verstärktes Heizen bei offenem Fenster", correct: false },
+        { text: "Nur mehr Solarpanele montieren ohne Dämmung", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-effizienz/"
+    },
+    {
+      question: "Was ist ein typisches Verhalten, das den Nutzen effizienterer Technik abschwächen kann?",
+      answers: [
+        { text: "Nachlässigerer Verbrauch (Rebound‑Effekt)", correct: true },
+        { text: "Strikte Einhaltung der Bedienungsanleitung", correct: false },
+        { text: "Nutzung energieeffizienter Geräte", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-effizienz/"
+    }
+  ],
+
+  "biogas": [
+    {
+      question: "Welches Gas ist der Hauptbestandteil von Biogas?",
+      answers: [
+        { text: "Methan (CH4)", correct: true },
+        { text: "Sauerstoff (O2)", correct: false },
+        { text: "Stickstoff (N2)", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+    },
+    {
+      question: "Welche Einsatzstoffe sind in landwirtschaftlichen Biogasanlagen typisch?",
+      answers: [
+        { text: "Gülle und Energiepflanzen", correct: true },
+        { text: "Steinkohle", correct: false },
+        { text: "Kerosin", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+    },
+    {
+      question: "Wofür kann aufbereitetes Biomethan verwendet werden?",
+      answers: [
+        { text: "Als Kraftstoff (CNG/CBG) oder zur Einspeisung in das Erdgasnetz", correct: true },
+        { text: "Direkt als Rohbenzin fürs Flugzeug ohne Aufbereitung", correct: false },
+        { text: "Als Lebensmittel", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+    },
+    {
+      question: "Wie werden Gärreste aus Biogasanlagen meist genutzt?",
+      answers: [
+        { text: "Als Dünger/Wirtschaftsdünger auf Feldern", correct: true },
+        { text: "Als Trinkwasser", correct: false },
+        { text: "Als Verpackungsmaterial", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+    },
+    {
+      question: "Gibt es pauschale, bedingungslose Investitionszuschüsse für Biogasanlagen?",
+      answers: [
+        { text: "Nein, Zuschüsse sind meist zweckgebunden und an Bedingungen geknüpft", correct: true },
+        { text: "Ja, immer für jede Anlage", correct: false },
+        { text: "Nur für Anlagen unter 1 kW", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+    },
+    {
+      question: "Was ist Co‑Vergärung in Biogasanlagen?",
+      answers: [
+        { text: "Gleichzeitige Vergärung verschiedener Substrate zur Optimierung der Gasproduktion", correct: true },
+        { text: "Verbrennung von Biogas in Co‑Kesseln", correct: false },
+        { text: "Ein separates Abfalllager außerhalb der Anlage", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+    },
+    {
+      question: "Welche Sicherheitsthemen werden bei Biogasanlagen häufig behandelt?",
+      answers: [
+        { text: "Explosions- und Hygienerisiken sowie Lagerungssicherheit", correct: true },
+        { text: "Nur Brandschutz bei großen Anlagen", correct: false },
+        { text: "Keine speziellen Sicherheitsanforderungen", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+    },
+    {
+      question: "Welche Rolle spielen Substratkosten für die Wirtschaftlichkeit einer Biogasanlage?",
+      answers: [
+        { text: "Eine große Rolle; günstige Rohstoffe verbessern die Wirtschaftlichkeit", correct: true },
+        { text: "Überhaupt keinen Einfluss", correct: false },
+        { text: "Nur bei Anlagen unter 10 kW relevant", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+    },
+    {
+      question: "Was ist eine mögliche Weiterverwendung von Biogas vor Ort?",
+      answers: [
+        { text: "Betrieb eines Blockheizkraftwerks (KWK) zur Strom‑ und Wärmeversorgung", correct: true },
+        { text: "Direktes Einspeisen in Trinkwasserleitungen", correct: false },
+        { text: "Verwendung als Baumaterial", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+    },
+    {
+      question: "Warum kann die Aufbereitung von Biogas zu Biomethan sinnvoll sein?",
+      answers: [
+        { text: "Um das Gas netz‑ oder fahrzeugtauglich zu machen", correct: true },
+        { text: "Um das Gas sofort zu trinken", correct: false },
+        { text: "Um das Volumen zu verdoppeln", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+    },
+    {
+      question: "Welche Umweltfrage ist bei Einsatz von Energiepflanzen für Biogas relevant?",
+      answers: [
+        { text: "Flächenkonkurrenz zur Nahrungsmittelproduktion und Biodiversität", correct: true },
+        { text: "Biogas verbraucht keine Energiepflanzen", correct: false },
+        { text: "Energiepflanzen sind immer die umweltfreundlichste Option", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+    },
+    {
+      question: "Welche Maßnahme verbessert die Akzeptanz von Biogasprojekten in der Region?",
+      answers: [
+        { text: "Transparente Information über Substrate und Emissionsschutzmaßnahmen", correct: true },
+        { text: "Geheimhaltung der Betriebsdaten", correct: false },
+        { text: "Verzicht auf jegliche Sicherheitsstandards", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+    },
+    {
+      question: "Wie lässt sich die Netzintegration von Biogas‑Kraftwerken zweckmäßig gestalten?",
+      answers: [
+        { text: "Durch Einsatz flexibler Betriebsstrategien und bedarfsgerechte Erzeugung", correct: true },
+        { text: "Durch dauerhaftes Abschalten bei hoher Solarproduktion", correct: false },
+        { text: "Durch Einspeisung nur an Sonntagen", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+    },
+    {
+      question: "Welches Nebenprodukt entsteht bei der Vergärung und kann wirtschaftlich genutzt werden?",
+      answers: [
+        { text: "Gärrest (als Wirtschaftsdünger)", correct: true },
+        { text: "Kohleasche", correct: false },
+        { text: "Flüssiger Asphalt", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+    }
+  ],
+
+  
+
+
+
+
+
+
+"wood": [
+    {
+      question: "Welcher Holzbrennstoff gilt als klimafreundlich bei moderner Verbrennungstechnik?",
+      answers: [
+        { text: "Holzpellets", correct: true },
+        { text: "Braunkohlebriketts", correct: false },
+        { text: "Schweröl", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/holzenergie-und-waerrmenetze/"
+    },
+    {
+      question: "Worauf sollte man bei Scheitholz für effizientes Heizen besonders achten?",
+      answers: [
+        { text: "Geringe Holzfeuchte", correct: true },
+        { text: "Bunte Lackschichten", correct: false },
+        { text: "Sehr lange Scheite (> 1 m)", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/holzenergie-und-waerrmenetze/"
+    },
+    {
+      question: "Was verteilen Wärmenetze überwiegend?",
+      answers: [
+        { text: "Wärme aus zentraler Erzeugung", correct: true },
+        { text: "Druckluft für Industrieanlagen", correct: false },
+        { text: "Kohlendioxid für Gewächshäuser", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/holzenergie-und-waerrmenetze/"
+    },
+    {
+      question: "Warum werden moderne Holzfeuerungen mit Abgasreinigung als akzeptabler eingestuft?",
+      answers: [
+        { text: "Weil sie Emissionen deutlich reduzieren und effizienter arbeiten", correct: true },
+        { text: "Weil Holz keinerlei Emissionen verursacht", correct: false },
+        { text: "Weil sie billiger als Luft sind", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/holzenergie-und-waerrmenetze/"
+    },
+    {
+      question: "Welches Thema betrifft Betreiber größerer Holzenergieanlagen (Schwellenwert)?",
+      answers: [
+        { text: "Zertifizierungspflichten ab bestimmten Feuerungsleistungen (RED III‑Anforderungen)", correct: true },
+        { text: "Verbot der Nutzung von Holzpellets", correct: false },
+        { text: "Pflicht zum Einsatz von Kohle als Backup", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/2025/03/28/zertifizierungspflicht-fuer-holzenergieanlagen-ab-75-mw/"
+    },
+    {
+      question: "Welche Form der Wärmeversorgung empfiehlt sich für dicht bebaute Ortsteile?",
+      answers: [
+        { text: "Zentrale Erzeugung (z. B. Heizwerk) und Verteilung über Wärmenetz", correct: true },
+        { text: "Jeder Haushalt eigene Ölheizung", correct: false },
+        { text: "Nur mobile elektrische Heizlüfter", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/holzenergie-und-waerrmenetze/"
+    },
+    {
+      question: "Welche Rolle spielt regionale Verfügbarkeit bei Energieholz?",
+      answers: [
+        { text: "Sie ist wichtig — Energieholzmärkte sind überwiegend regional geprägt", correct: true },
+        { text: "Regionale Verfügbarkeit ist irrelevant", correct: false },
+        { text: "Holz wird ausschließlich importiert", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/positionspapier-energieholznutzung-und-klimaschutz/"
+    },
+    {
+      question: "Was ist ein Vorteil von Holzpellets gegenüber unsortiertem Restholz?",
+      answers: [
+        { text: "Konstante Brennstoffqualität und automatisierbare Lagerung/Feuerung", correct: true },
+        { text: "Pellets haben immer höhere Emissionen", correct: false },
+        { text: "Pellets sind wasserlöslich", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/holzenergie-und-waerrmenetze/"
+    },
+    {
+      question: "Wofür werden Biomasseheizwerke häufig eingesetzt?",
+      answers: [
+        { text: "Zur Bereitstellung von Wärme für Quartiere und Industrieprozesse", correct: true },
+        { text: "Als Trinkwasseraufbereitung", correct: false },
+        { text: "Als Solarspeicher", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/holzenergie-und-waerrmenetze/"
+    },
+    {
+      question: "Welche Maßnahme hilft, Aschen aus Holzverbrennung zu verwerten?",
+      answers: [
+        { text: "Gezielte Ascheverwertung nach Leitfäden und gesetzlichen Vorgaben", correct: true },
+        { text: "Asche ins Grundwasser leiten", correct: false },
+        { text: "Asche ungeprüft auf Spielplätzen verteilen", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/holzenergie-und-waerrmenetze/"
+    },
+    {
+      question: "Welcher Aspekt ist bei Planung eines Wärmenetzes finanziell relevant?",
+      answers: [
+        { text: "Förderprogramme und Wirtschaftlichkeits‑Berechnungen", correct: true },
+        { text: "Anzahl der Fenster im Haus", correct: false },
+        { text: "Länge der benachbarten Flüsse", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/2022/10/05/bundesfoerderung-fuer-effiziente-waermenetze-bew/"
+    },
+    {
+      question: "Welche Technik kann Prozesswärme in der Industrie ersetzen?",
+      answers: [
+        { text: "Holzenergie und biomassebasierte Systeme in Kombination mit Wärmerückgewinnung", correct: true },
+        { text: "Offshore‑Wind direkt im Firmengebäude", correct: false },
+        { text: "Elektrische Heizlüfter ohne Regelung", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/holzenergie-und-waerrmenetze/"
+    },
+    {
+      question: "Warum sind Wärmenetze ein sinnvolles Mittel zur Dekarbonisierung?",
+      answers: [
+        { text: "Sie ermöglichen zentrale Erzeugung mit erneuerbaren Quellen und Kopplung unterschiedlicher Erzeuger", correct: true },
+        { text: "Weil sie fossile Brennstoffe direkt verteilen", correct: false },
+        { text: "Weil sie nur in Großstädten gebaut werden können", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/holzenergie-und-waerrmenetze/"
+    },
+    {
+      question: "Was ist bei Lagerung von Holzpellets wichtig?",
+      answers: [
+        { text: "Trockenheit und geschützte Lagerbedingungen", correct: true },
+        { text: "Lagerung direkt im Freien ohne Schutz", correct: false },
+        { text: "Pellets in Wasser einweichen", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/holzenergie-und-waerrmenetze/"
+    }
+  ],
+
+
+
+
+
+
+
+"mat": [
+    {
+      question: "Was versteht man unter stofflicher Nutzung nachwachsender Rohstoffe?",
+      answers: [
+        { text: "Einsatz als Material (z. B. Biokunststoffe, Fasern) statt ausschließlicher energetischer Nutzung", correct: true },
+        { text: "Ausschließlich Verbrennung zur Energiegewinnung", correct: false },
+        { text: "Nur Stromerzeugung", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-paludikultur-2/"
+    },
+    {
+      question: "Was ist Paludikultur?",
+      answers: [
+        { text: "Nutzung wiedervernässter Moorflächen zur Produktion spezialisierter Biomasse", correct: true },
+        { text: "Trockenfeldbau auf Moorböden", correct: false },
+        { text: "Eine Form der intensiven Viehwirtschaft", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-paludikultur-2/"
+    },
+    {
+      question: "Welche Einsatzmöglichkeiten bieten Pflanzen aus Paludikulturen?",
+      answers: [
+        { text: "Baustoffe, Einstreu, Dämmstoffe und Rohstoffe für Bioraffinerien", correct: true },
+        { text: "Nur zur Erzeugung von Kohle", correct: false },
+        { text: "Keine wirtschaftliche Nutzung möglich", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-paludikultur-2/"
+    },
+    {
+      question: "Was ist das Ziel einer Bioraffinerie?",
+      answers: [
+        { text: "Verschiedene Produkte (Materialien, Chemikalien, Energie) aus Biomasse zu erzeugen", correct: true },
+        { text: "Nur Holz zu verbrennen", correct: false },
+        { text: "Rohöl in Produkte umzuwandeln", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-bioraffinerien/"
+    },
+    {
+      question: "Welche Vorteile bieten biobasierte Werkstoffe wie Flachs oder Hanf?",
+      answers: [
+        { text: "Sie sind nachwachsend und für Dämmstoffe, Fasern und Werkstoffe nutzbar", correct: true },
+        { text: "Sie sind chemisch identisch mit Asbest", correct: false },
+        { text: "Sie können nur als Brennstoff verwendet werden", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/industriepflanzen/"
+    },
+    {
+      question: "Was sind Biokunststoffe?",
+      answers: [
+        { text: "Kunststoffe auf Basis nachwachsender Rohstoffe oder biologisch abbaubarer Polymere", correct: true },
+        { text: "Kunststoffe aus reinem Erdöl", correct: false },
+        { text: "Nur Glasfasern", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-bioraffinerien/"
+    },
+    {
+      question: "Welche Rolle spielen Bioraffinerien in der Bioökonomie?",
+      answers: [
+        { text: "Sie ermöglichen die flexible Produktion vieler Produkte aus Biomasse und erhöhen Ressourceneffizienz", correct: true },
+        { text: "Sie sind reine Verfeuerungsanlagen", correct: false },
+        { text: "Sie ersetzen alle petrochemischen Anlagen sofort", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-bioraffinerien/"
+    },
+    {
+      question: "Wofür können pflanzliche Fasern wie Flachs verwendet werden?",
+      answers: [
+        { text: "Für Textilien, Dämmstoffe und Verbundwerkstoffe", correct: true },
+        { text: "Nur als Deponiematerial", correct: false },
+        { text: "Nur als chemische Lösemittel", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/industriepflanzen/"
+    },
+    {
+      question: "Welche Eigenschaft ist für stoffliche Nutzung von Rohstoffen besonders wichtig?",
+      answers: [
+        { text: "Langlebigkeit/Materialfunktion statt sofortiger Verbrennung", correct: true },
+        { text: "Sofortige Verbrennbarkeit", correct: false },
+        { text: "Unbedingte Eignung als Futtermittel", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-bioraffinerien/"
+    },
+    {
+      question: "Wie können Paludikulturen klimatisch positiv wirken?",
+      answers: [
+        { text: "Sie ermöglichen Nutzung bei gleichzeitigem Moorschutz und Treibhausgasminderung", correct: true },
+        { text: "Sie erhöhen automatisch CO2‑Emissionen", correct: false },
+        { text: "Sie zerstören die Biodiversität zwingend", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-paludikultur-2/"
+    },
+    {
+      question: "Was ist ein mögliches Produkt aus der stofflichen Nutzung von Nachwachsenden Rohstoffen?",
+      answers: [
+        { text: "Dämmplatten aus Pflanzenfasern", correct: true },
+        { text: "Erdölprodukte direkt aus Pflanzen", correct: false },
+        { text: "Flüssiges Metall", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-paludikultur-2/"
+    },
+    {
+      question: "Welche Herausforderung besteht bei stofflicher Nutzung im Vergleich zu energetischer Nutzung?",
+      answers: [
+        { text: "Aufbau stabiler Wertschöpfungsketten und Marktzugänge", correct: true },
+        { text: "Es gibt keine Herausforderungen", correct: false },
+        { text: "Stoffliche Nutzung ist immer billiger", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-bioraffinerien/"
+    },
+    {
+      question: "Welche Rolle spielt Industriehanf in der stofflichen Nutzung?",
+      answers: [
+        { text: "Hanf liefert Fasern und Rohstoffe für Werkstoffe und Bauanwendungen", correct: true },
+        { text: "Hanf ist nur für Rauschmittelproduktion geeignet", correct: false },
+        { text: "Hanf kann nur als Dünger verwendet werden", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/industriepflanzen/"
+    },
+    {
+      question: "Was ist ein Vorteil stofflicher Nutzung gegenüber alleiniger Verbrennung?",
+      answers: [
+        { text: "Längere CO2‑Speicherung in langlebigen Produkten und höherer Wertschöpfung", correct: true },
+        { text: "Sofort bessere Stromerzeugung", correct: false },
+        { text: "Geringere Rohstoffeffizienz", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-bioraffinerien/"
+    }
+  ],
+
+
+
+
+
+
+
+      
+  "sust": [
+    {
+      question: "Wie wird Nachhaltigkeit häufig in der Forstwirtschaft formuliert?",
+      answers: [
+        { text: "Nicht mehr entnehmen, als nachwächst", correct: true },
+        { text: "So viel wie möglich entnehmen", correct: false },
+        { text: "Nur Monokulturen pflanzen", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-nachhaltigkeit/"
+    },
+    {
+      question: "Welche drei Dimensionen umfasst Nachhaltigkeit klassisch?",
+      answers: [
+        { text: "Ökologie, Ökonomie, Soziales", correct: true },
+        { text: "Technik, Markt, Werbung", correct: false },
+        { text: "Kultur, Sport, Freizeit", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-nachhaltigkeit/"
+    },
+    {
+      question: "Welche globalen Ziele dienen oft als Orientierung für nachhaltige Entwicklung?",
+      answers: [
+        { text: "Die 17 Sustainable Development Goals (SDGs)", correct: true },
+        { text: "Die 7 Weltmeere‑Initiative", correct: false },
+        { text: "Die 12 Kulturziele", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-nachhaltigkeit/"
+    },
+    {
+      question: "Was bedeutet zirkuläres Wirtschaften in einem Satz?",
+      answers: [
+        { text: "Ressourcen möglichst lange nutzen, wiederverwenden und stofflich/technisch recyceln", correct: true },
+        { text: "Einmalige Nutzung und sofort entsorgen", correct: false },
+        { text: "Nur fossile Rohstoffe verwenden", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-nachhaltigkeit/"
+    },
+    {
+      question: "Warum ist nachhaltige Beschaffung wichtig für Kommunen und Unternehmen?",
+      answers: [
+        { text: "Sie reduziert Umwelt- und Klimabelastungen und fördert faire Lieferketten", correct: true },
+        { text: "Sie erhöht automatisch den Energieverbrauch", correct: false },
+        { text: "Sie ersetzt alle technischen Maßnahmen", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-nachhaltigkeit/"
+    },
+    {
+      question: "Was ist ein normatives Ziel von Nachhaltigkeit?",
+      answers: [
+        { text: "Gerechtigkeit gegenüber heutigen und zukünftigen Generationen", correct: true },
+        { text: "Maximaler kurzfristiger Profit", correct: false },
+        { text: "Ausschließlich technologischer Fortschritt", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-nachhaltigkeit/"
+    },
+    {
+      question: "Welches Instrument kann Kommunen bei der nachhaltigen Energieplanung unterstützen?",
+      answers: [
+        { text: "Energienutzungsplan", correct: true },
+        { text: "Briefmarkensammlung", correct: false },
+        { text: "Autowaschplan", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-nachhaltigkeit/"
+    },
+    {
+      question: "Welche Rolle spielt Bildung für die Nachhaltigkeitstransformation?",
+      answers: [
+        { text: "Sie vermittelt Wissen und fördert Verhaltensänderung zur Umsetzung nachhaltiger Praktiken", correct: true },
+        { text: "Sie ist unwichtig im Transformationsprozess", correct: false },
+        { text: "Sie wird nur in Industriestaaten gebraucht", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-nachhaltigkeit/"
+    },
+    {
+      question: "Was versteht man unter nachhaltiger Lieferkette?",
+      answers: [
+        { text: "Berücksichtigung von sozialen, ökologischen und ökonomischen Kriterien entlang der Wertschöpfungskette", correct: true },
+        { text: "Maximaler Profit unabhängig von Lieferantenbedingungen", correct: false },
+        { text: "Lokale Beschaffung ohne Prüfung", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-nachhaltigkeit/"
+    },
+    {
+      question: "Wie kann Kommunen Nachhaltigkeit praktisch fördern?",
+      answers: [
+        { text: "Durch kommunale Beschaffungsstandards, Energieplanung und Bildungsangebote", correct: true },
+        { text: "Indem sie alle Maßnahmen verbieten", correct: false },
+        { text: "Indem sie nur Sportveranstaltungen fördern", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-nachhaltigkeit/"
+    },
+    {
+      question: "Welche Bedeutung hat circular management (Kreislaufwirtschaft) für Klimaschutz?",
+      answers: [
+        { text: "Sie reduziert Rohstoffverbrauch und Emissionen durch Wiederverwendung und Recycling", correct: true },
+        { text: "Sie erhöht automatisch Emissionen", correct: false },
+        { text: "Sie ist nur für den Kulturbereich relevant", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-nachhaltigkeit/"
+    },
+    {
+      question: "Welche Rolle spielen verbindliche Ziele in nachhaltiger Unternehmensführung?",
+      answers: [
+        { text: "Sie schaffen Orientierung und ermöglichen Fortschrittsmessung", correct: true },
+        { text: "Sie verhindern jegliche Innovation", correct: false },
+        { text: "Sie sind nur für NGOs wichtig", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-nachhaltigkeit/"
+    },
+    {
+      question: "Was kann eine Kommune als erstes tun, um nachhaltiger zu werden?",
+      answers: [
+        { text: "Einen Energienutzungsplan erstellen und gezielte Maßnahmen planen", correct: true },
+        { text: "Nur auf fossile Energiequellen setzen", correct: false },
+        { text: "Alle öffentlichen Verkehrsmittel einstellen", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-nachhaltigkeit/"
+    },
+    {
+      question: "Warum sind praxisnahe Informationen (z. B. FAQs) für Nachhaltigkeit wichtig?",
+      answers: [
+        { text: "Sie helfen, komplexe Themen verständlich zu machen und Entscheidungen vor Ort zu treffen", correct: true },
+        { text: "Sie ersetzen gesetzliche Vorgaben", correct: false },
+        { text: "Sie sind nur für Forschende relevant", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-nachhaltigkeit/"
+    },
+    {
+      question: "Wie tragen SDGs (Sustainable Development Goals) zur lokalen Planung bei?",
+      answers: [
+        { text: "Sie bieten einen Rahmen für integrierte Ziele und Maßnahmen", correct: true },
+        { text: "Sie sind nur für nationale Regierungen gedacht", correct: false },
+        { text: "Sie ersetzen lokale Zielsetzungen vollständig", correct: false }
+      ],
+      source: "https://www.carmen-ev.de/service/faqten/faq/faq-nachhaltigkeit/"
+    }
+  ]
+};
