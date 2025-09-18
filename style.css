@@ -277,3 +277,16 @@ footer a img:hover {
   transform: scale(1.05);
   transition: all 0.3s ease;
 }
+.hint-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+  padding: 10px;
+}
+
+.hint-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
