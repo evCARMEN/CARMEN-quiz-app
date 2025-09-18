@@ -130,8 +130,23 @@ main{max-width:900px; margin: 18px auto; padding: 0 12px}
 
 .controls{display:flex; justify-content:space-between; margin-top:12px}
 
-.app-footer{
-  text-align:center; color:#556; padding:16px 8px 28px
+.app-footer {
+  text-align: center;
+  color: #556;
+  padding: 16px 8px 28px;
+  font-size: 0.9rem;
+  background: #f0f4f8;
+  border-top: 1px solid #ccc;
+}
+
+.app-footer a {
+  color: #2F52A0;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
 }
 
 /* Responsive */
@@ -149,8 +164,7 @@ main{max-width:900px; margin: 18px auto; padding: 0 12px}
 }
 
 body {
-  background-color: #ffffff !important;
-  color: #000000 !important;
+  background: linear-gradient(to bottom, #f6f7f6, #e9ecef);
 }
 /* ======================
    Darkmode deaktivieren – App immer hell anzeigen
@@ -283,4 +297,22 @@ a:focus {
   width: 32px;
   height: 32px;
   object-fit: contain;
+}
+
+.btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.logo {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
 }
