@@ -297,18 +297,27 @@ const extraHintEl = document.getElementById("extra-hint");
 
 if (extraHintEl) {
   const iconFile = getPlatformIcon(randomHint.url);
-  const iconHTML = iconFile
-    ? `<img src="assets/icons/${iconFile}" alt="" class="hint-icon">`
-    : "";
+extraHintEl.innerHTML = ''; // leeren
 
-  extraHintEl.innerHTML = `
-    <div class="hint-content">
-      ${iconHTML}
-      <a href="${randomHint.url}" target="_blank" rel="noopener">${randomHint.text}</a>
-    </div>
-  `;
+const container = document.createElement('div');
+container.className = 'hint-content';
+
+if (iconFile) {
+  const img = document.createElement('img');
+  img.src = `assets/icons/${iconFile}`;
+  img.alt = randomHint.text;
+  img.className = 'hint-icon';
+  container.appendChild(img);
 }
 
+const link = document.createElement('a');
+link.href = randomHint.url;
+link.target = '_blank';
+link.rel = 'noopener';
+link.textContent = randomHint.text;
+
+container.appendChild(link);
+extraHintEl.appendChild(container);
 
 // ---------- Utils ----------
 function shuffle(arr){
