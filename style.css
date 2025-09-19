@@ -1,7 +1,9 @@
-/* ===============
+/* 
+ ==============
    C.A.R.M.E.N. Quiz – Styles
    CI: Century Gothic, Hauptgrün #18470F
-   =============== */
+   ===============
+*/
 :root{
   --carmen-green: #18470F;
   --wind: #2F52A0;
@@ -165,7 +167,7 @@ main{max-width:900px; margin: 18px auto; padding: 0 12px}
 
 /* Responsive */
 @media (max-width:700px){
-  .mode-grid{grid-template-columns: 1fr}
+  .mode-grid{flex-direction: column}
   .category-grid{grid-template-columns: 1fr}
   .wheel{width:200px;height:200px}
   .answer-btn{font-size:1rem}
@@ -230,7 +232,6 @@ html, body {
   text-decoration: underline;
   color: #18470F;
 }
-
 
 #score {
   font-size: 1.5em;
@@ -330,7 +331,7 @@ a:focus {
   to { opacity: 1; transform: scale(1); }
 }
 
-.wheel::after.spin-tick {
+.wheel.spin-tick::after {
   animation: tick 0.3s ease-in-out 3;
 }
 
@@ -425,4 +426,5 @@ section.show {
   50% { transform: scale(1.05); opacity: 1; }
   100% { transform: scale(1); }
 }
+
 
