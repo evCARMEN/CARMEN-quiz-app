@@ -94,9 +94,23 @@ main{max-width:900px; margin: 18px auto; padding: 0 12px}
   position:relative;
   box-shadow: 0 10px 24px rgba(0,0,0,.12);
 }
-.wheel::after{
-  content:''; position:absolute; left:50%; top:-14px; transform:translateX(-50%);
-  width:0; height:0; border-left:10px solid transparent; border-right:10px solid transparent; border-bottom:14px solid #222;
+.wheel.spin-glow {
+  box-shadow: 0 0 20px 6px rgba(255, 255, 255, 0.6);
+}
+
+.wheel::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: -18px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 18px solid #222;
+  z-index: 10;
+  pointer-events: none;
 }
 
 .quiz-header{display:flex; justify-content:space-between; align-items:center; gap:12px}
@@ -316,6 +330,15 @@ a:focus {
   to { opacity: 1; transform: scale(1); }
 }
 
+.wheel::after.spin-tick {
+  animation: tick 0.3s ease-in-out 3;
+}
+
+@keyframes tick {
+  0% { transform: translateX(-50%) rotate(0deg); }
+  50% { transform: translateX(-50%) rotate(6deg); }
+  100% { transform: translateX(-50%) rotate(0deg); }
+}
 
 .category-btn {
   display: flex;
