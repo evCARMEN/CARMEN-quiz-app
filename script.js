@@ -63,6 +63,8 @@ fetch("https://evcarmen.github.io/CARMEN-quiz-app/questions.json")
 // ---------- DOM-Elemente ----------
 const modeSection     = document.getElementById('mode-selection');
 const catSection      = document.getElementById('category-selection');
+
+catSection.classList.add('show'); // Kategorie-Bereich initial sichtbar
 // ---------- Start-Button ----------
 const startBtn = document.getElementById('start-quiz-btn');
 
@@ -71,8 +73,8 @@ startBtn.addEventListener('click', () => {
   modeSection.classList.add('hidden');
 
   // Kategorie-Buttons aufbauen und anzeigen
-  buildCategoryButtons();
-  catSection.classList.remove('hidden');
+ buildCategoryButtons();
+catSection.classList.add('show');
 });
 
 const quizSection     = document.getElementById('quiz');
@@ -165,8 +167,8 @@ function startCategory(key){
   idx = 0;
   score = 0;
 
-  catSection.classList.add('hidden');
-  quizSection.classList.remove('hidden');
+  catSection.classList.remove('show');
+quizSection.classList.add('show');
 
   titleEl.textContent = CATS[key].label;
   showQuestion();
