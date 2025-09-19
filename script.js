@@ -1,17 +1,12 @@
 /* ==============================
    C.A.R.M.E.N. Quiz-App – Logik
-   - Zwei Modi: Übung & Test (10 Zufallsfragen)
-   - Kategorie-Auswahl + Glücksrad
-   - Zufällige Antwortreihenfolge
-   - Sofortiges Feedback + Quelle
-   - Mobile optimiert
    =================================*/
 
 // ---------- Globale States ----------
 let MODE = null;                 // 'practice' | 'test'
 let CURRENT_CAT_KEY = null;      // z.B. 'wind'
 let CURRENT_COLOR = '#18470F';
-let currentQuestions = [];       // aktuell gezogene Fragen (abh. von Modus)
+let currentQuestions = [];       // aktuell gezogene Fragen
 let idx = 0;                     // Index der aktuellen Frage
 let score = 0;
 
@@ -30,79 +25,24 @@ const CATS = {
   sust:  { label: "Nachhaltigkeit", color: "#DEDC00" },
 };
 
-// ---------- Fragenpool (Beispiel-Datensatz) ----------
-// HINWEIS: Um sofort testen zu können, liegt ein kompakter Fragenpool bei (3–4 je Kategorie).
-// Du kannst die Fragen leicht erweitern: Füge einfach weitere Objekte in die Arrays ein.
-// Struktur je Frage:
-// {
-//   question: "Fragetext",
-//   answers: [
-//     { text: "Antwort A", correct: false },
-//     { text: "Antwort B", correct: true  },
-//     { text: "Antwort C", correct: false }
-//   ],
-//   source: "https://www.carmen-ev.de/..."
-// }
+// ---------- Fragenpool ----------
 let QUESTION_BANK = {};
 
 fetch("https://evcarmen.github.io/CARMEN-quiz-app/questions.json")
   .then(res => {
-    if (!res.ok) {
-      throw new Error(`HTTP error! Status: ${res.status}`);
-    }
+    if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
     return res.json();
   })
   .then(data => {
     QUESTION_BANK = data;
     console.log("Fragen erfolgreich geladen:", data);
   })
-  .catch(err => {
-    console.error("Fehler beim Laden der Fragen:", err.message);
-  });
+  .catch(err => console.error("Fehler beim Laden der Fragen:", err.message));
 
 // ---------- DOM-Elemente ----------
-const modeSection = document.getElementById('mode-selection');
-const catSection  = document.getElementById('category-selection');
-const quizSection = document.getElementById('quiz');
-const resultSection = document.getElementById('result');
-
-// ---------- Initialzustand ----------
-// Nur die Start-/Mode-Auswahl sichtbar machen
-modeSection.classList.remove('hidden');
-modeSection.classList.add('show');
-
-// Alle anderen Sektionen ausblenden
-catSection.classList.remove('show');
-catSection.classList.add('hidden');
-
-quizSection.classList.remove('show');
-quizSection.classList.add('hidden');
-
-resultSection.classList.remove('show');
-resultSection.classList.add('hidden');
-
-console.log("Initialzustand gesetzt:", {
-  mode: modeSection.className,
-  cat: catSection.className,
-  quiz: quizSection.className,
-  result: resultSection.className
-});
-
-// ---------- Start-Button ----------
-const startBtn = document.getElementById('start-quiz-btn');
-
-startBtn.addEventListener('click', () => {
-  // Startkarte ausblenden
-  modeSection.classList.add('hidden');
-
-  // Kategorie-Buttons aufbauen und anzeigen
-  buildCategoryButtons();
-
-  // Sichtbarkeit aktivieren + Animation
-  catSection.classList.remove('hidden');  
-  // catSection.classList.add('show');
-});
-
+const modeSection     = document.getElementById('mode-selection');
+const catSection      = document.getElementById('category-selection');
+const startBtn        = document.getElementById('start-quiz-btn');
 const quizSection     = document.getElementById('quiz');
 const resultSection   = document.getElementById('result');
 const catButtonsWrap  = document.getElementById('category-buttons');
@@ -121,17 +61,23 @@ const scoreEl   = document.getElementById('score');
 const breakdown = document.getElementById('breakdown');
 const restartBtn= document.getElementById('restart-btn');
 
-// ---------- Initialisierung ----------
+// ---------- Start-Button ----------
+startBtn.addEventListener('click', () => {
+  // Startseite ausblenden
+  modeSection.classList.add('hidden');
+
+  // Kategorien vorbereiten
+  buildCategoryButtons();
+
+  // Kategorieauswahl anzeigen
+  catSection.classList.remove('hidden');
+  catSection.classList.add('show');
+});
+
+// ---------- Navigation ----------
 backBtn.addEventListener('click', () => {
-  // Quizbereich ausblenden
   quizSection.classList.add('hidden');
-
-  // Quiz-Zustand zurücksetzen
-  idx = 0;
-  score = 0;
-  currentQuestions = [];
-
-  // Kategorie-Bereich neu aufbauen und anzeigen
+  idx = 0; score = 0; currentQuestions = [];
   buildCategoryButtons();
   catSection.classList.remove('hidden');
   catSection.classList.add('show');
@@ -139,26 +85,15 @@ backBtn.addEventListener('click', () => {
 
 restartBtn.addEventListener('click', () => {
   resultSection.classList.add('hidden');
-
-  // Quiz zurücksetzen
-  idx = 0;
-  score = 0;
-  currentQuestions = [];
-
-  // Kategorie-Bereich neu aufbauen und anzeigen
+  idx = 0; score = 0; currentQuestions = [];
   buildCategoryButtons();
   catSection.classList.remove('hidden');
   catSection.classList.add('show');
-
-  // Quiz-Bereich ausblenden
   quizSection.classList.add('hidden');
 });
 
 nextBtn.addEventListener('click', nextQuestion);
-
 spinBtn.addEventListener('click', spinWheel);
-
-buildCategoryButtons();
 
 // ---------- UI-Aufbau ----------
 function buildCategoryButtons() {
@@ -169,7 +104,6 @@ function buildCategoryButtons() {
     b.className = 'category-btn';
     b.style.background = val.color;
 
-    // Kategorien mit LSE-Logo
     const showLogo = ['wind', 'sun', 'heat', 'eff'].includes(key);
     const labelText = val.label.replace(/\s*\(LandSchafftEnergie\)/, '');
 
@@ -189,13 +123,10 @@ function spinWheel(){
   const sliceDeg = 360 / keys.length;
   const endDeg = 5 * 360 + targetIndex * sliceDeg + sliceDeg/2;
 
-  // Übergibt Endwinkel als CSS-Variable
   wheel.style.setProperty('--end-deg', `${endDeg}deg`);
-
-  wheel.classList.remove('spinning'); // reset
-  void wheel.offsetWidth; // force reflow
+  wheel.classList.remove('spinning');
+  void wheel.offsetWidth;
   wheel.classList.add('spinning');
-
   spinBtn.disabled = true;
 
   wheel.addEventListener('animationend', () => {
@@ -214,71 +145,54 @@ function spinWheel(){
   }, { once: true });
 }
 
-
 // ---------- Kategorie starten ----------
 function startCategory(key){
   CURRENT_CAT_KEY = key;
   CURRENT_COLOR = CATS[key].color;
 
-  // Fragenpool kopieren & mischen
   const pool = QUESTION_BANK[key] ? [...QUESTION_BANK[key]] : [];
   shuffle(pool);
 
-  // Nur 3 Fragen pro Runde
-  currentQuestions = pool.slice(0, 3);
+  currentQuestions = pool.slice(0, QUESTIONS_PER_ROUND);
+  idx = 0; score = 0;
 
-  idx = 0;
-  score = 0;
-
-  catSection.classList.remove('show');
-catSection.classList.add('hidden'); // ← Kategorie-Sektion ausblenden
-
-quizSection.classList.remove('hidden'); // ← Quiz-Sektion sichtbar machen
-quizSection.classList.add('show');      // ← Animation starten
+  catSection.classList.add('hidden');
+  quizSection.classList.remove('hidden');
+  quizSection.classList.add('show');
 
   titleEl.textContent = CATS[key].label;
   showQuestion();
 }
 
-
-// ---------- Frage rendern ----------
+// ---------- Frage anzeigen ----------
 function showQuestion(){
   if (idx >= currentQuestions.length) return endQuiz();
- qEl.classList.remove('show');
 
-  const q = currentQuestions[idx];
-
-  qEl.textContent = q.question;
-   qEl.classList.add('show');
+  qEl.textContent = currentQuestions[idx].question;
   answersEl.innerHTML = '';
   feedback.textContent = '';
   feedback.className = 'feedback';
 
-  const answers = shuffle([...q.answers]);
-
+  const answers = shuffle([...currentQuestions[idx].answers]);
   answers.forEach(a => {
     const btn = document.createElement('button');
     btn.className = 'answer-btn';
     btn.textContent = a.text;
     btn.dataset.correct = a.correct;
-    btn.addEventListener('click', () => handleAnswer(btn, a.correct, q.source));
+    btn.addEventListener('click', () => handleAnswer(btn, a.correct, currentQuestions[idx].source));
     answersEl.appendChild(btn);
   });
 
   progress.textContent = `Frage ${idx+1} / ${currentQuestions.length}`;
-
   nextBtn.classList.add('hidden');
   sourceEl.innerHTML = '';
 }
 
-// ---------- Antwort-Handling ----------
+// ---------- Antwort prüfen ----------
 function handleAnswer(btn, isCorrect, source){
-  const all = [...answersEl.querySelectorAll('button')];
-  all.forEach(b => b.disabled = true);
-   
-// Nutzerantwort speichern
+  [...answersEl.querySelectorAll('button')].forEach(b => b.disabled = true);
   currentQuestions[idx].userAnswer = isCorrect;
-// Score erhöhen 
+
   if (isCorrect){
     btn.classList.add('correct');
     feedback.textContent = '✅ Richtig!';
@@ -288,32 +202,24 @@ function handleAnswer(btn, isCorrect, source){
     btn.classList.add('wrong');
     feedback.textContent = '❌ Falsch!';
     feedback.classList.add('bad');
-
-    const answerButtons = [...answersEl.querySelectorAll('button')];
-    answerButtons.forEach(button => {
-      if (button.dataset.correct === "true") {
-        button.classList.add("correct");
-      }
-    });
     const correctAnswerText = getCorrectAnswerText();
     feedback.innerHTML += `<br>Die richtige Antwort ist: <strong>${correctAnswerText}</strong>`;
+    [...answersEl.querySelectorAll('button')].forEach(button => {
+      if (button.dataset.correct === "true") button.classList.add("correct");
+    });
   }
 
   if (source) {
     sourceEl.innerHTML = `Quelle: <a href="${source}" target="_blank" rel="noopener">${source}</a>`;
-  } else {
-    sourceEl.innerHTML = '';
   }
 
   nextBtn.classList.remove('hidden');
 }
 
 function getCorrectAnswerText() {
-  const currentQuestion = currentQuestions[idx];
-  const correctAnswer = currentQuestion.answers.find(a => a.correct);
+  const correctAnswer = currentQuestions[idx].answers.find(a => a.correct);
   return correctAnswer ? correctAnswer.text : '';
 }
-
 
 // ---------- Nächste Frage ----------
 function nextQuestion(){
@@ -325,16 +231,13 @@ function nextQuestion(){
   }
 }
 
-// ---------- Ende & Auswertung ----------
+// ---------- Quiz beenden ----------
 function endQuiz(){
   quizSection.classList.add('hidden');
   resultSection.classList.remove('hidden');
 
-  // Score anzeigen
   scoreEl.textContent = `Du hast ${score} von ${currentQuestions.length} Fragen richtig beantwortet.`;
 
-  // Breakdown
-  const breakdownEl = document.getElementById('breakdown');
   let breakdownHTML = '';
   currentQuestions.forEach((q, i) => {
     const isCorrect = q.userAnswer === true;
@@ -344,59 +247,25 @@ function endQuiz(){
       </div>
     `;
   });
-  breakdownEl.innerHTML = breakdownHTML;
+  breakdown.innerHTML = breakdownHTML;
 
- // Zufälliger Hinweis mit Logo
-const HINTS = [
-  { text: "📩 Melde dich zu unserem Newsletter an!", url: "https://www.carmen-ev.de/service/newsletter/" },
-  { text: "📅 Entdecke unseren Veranstaltungskalender", url: "https://www.carmen-ev.de/c-a-r-m-e-n-veranstaltungskalender/" },
-  { text: "🎧 Höre die C.A.R.M.E.N.-Podcasts", url: "https://www.carmen-ev.de/service/publikationen/c-a-r-m-e-n-podcasts/" },
-  { text: "📖 Stöbere in unseren Broschüren & Flyern", url: "https://www.carmen-ev.de/service/publikationen/publikationen-broschueren-und-flyer/" },
-  { text: "ℹ️ Erfahre mehr über C.A.R.M.E.N. e.V.", url: "https://www.carmen-ev.de/c-a-r-m-e-n-e-v/" },
-  { text: "Folge uns auf Instagram", url: "https://www.instagram.com/c.a.r.m.e.n.e.v/" },
-  { text: "Besuche uns auf Facebook", url: "https://www.facebook.com/CentralesAgrarRohstoffMarketingundEnergieNetzwerk/?locale=de_DE" },
-  { text: "Vernetze dich mit uns auf LinkedIn", url: "https://de.linkedin.com/company/carmenevCentralesAgrarRohstoffMarketingundEnergieNetzwerk/?locale=de_DE" },
-  { text: "Abonniere unseren YouTube-Kanal", url: "https://www.youtube.com/@c.a.r.m.e.n.e.v.9184" }
-];
-
-// Funktion zur Logo-Erkennung
-function getPlatformIcon(url) {
-  if (url.includes("instagram")) return "instagram.png";
-  if (url.includes("facebook")) return "facebook.png";
-  if (url.includes("linkedin")) return "linkedin.png";
-  if (url.includes("youtube")) return "youtube.png";
-  if (url.includes("newsletter")) return "newsletter.png";
-  if (url.includes("carmen-ev.de")) return "calendar.png";
-  return null;
-}
-
-// Anzeige des Hinweises mit Logo
-const randomHint = HINTS[Math.floor(Math.random() * HINTS.length)];
-const extraHintEl = document.getElementById("extra-hint");
-
-if (extraHintEl) {
-  const iconFile = getPlatformIcon(randomHint.url);
-extraHintEl.innerHTML = ''; // leeren
-
-const container = document.createElement('div');
-container.className = 'hint-content';
-
-if (iconFile) {
-  const img = document.createElement('img');
-  img.src = `assets/icons/${iconFile}`;
-  img.alt = randomHint.text;
-  img.className = 'hint-icon';
-  container.appendChild(img);
-}
-
-const link = document.createElement('a');
-link.href = randomHint.url;
-link.target = '_blank';
-link.rel = 'noopener';
-link.textContent = randomHint.text;
-
-container.appendChild(link);
-extraHintEl.appendChild(container);}
+  // Extra-Hinweis anzeigen
+  const HINTS = [
+    { text: "📩 Newsletter abonnieren", url: "https://www.carmen-ev.de/service/newsletter/" },
+    { text: "📅 Veranstaltungskalender", url: "https://www.carmen-ev.de/c-a-r-m-e-n-veranstaltungskalender/" },
+    { text: "🎧 Podcasts", url: "https://www.carmen-ev.de/service/publikationen/c-a-r-m-e-n-podcasts/" },
+    { text: "📖 Broschüren & Flyer", url: "https://www.carmen-ev.de/service/publikationen/publikationen-broschueren-und-flyer/" },
+    { text: "ℹ️ Über C.A.R.M.E.N. e.V.", url: "https://www.carmen-ev.de/c-a-r-m-e-n-e-v/" },
+    { text: "Instagram", url: "https://www.instagram.com/c.a.r.m.e.n.e.v/" },
+    { text: "Facebook", url: "https://www.facebook.com/CentralesAgrarRohstoffMarketingundEnergieNetzwerk/?locale=de_DE" },
+    { text: "LinkedIn", url: "https://de.linkedin.com/company/carmenevCentralesAgrarRohstoffMarketingundEnergieNetzwerk/?locale=de_DE" },
+    { text: "YouTube", url: "https://www.youtube.com/@c.a.r.m.e.n.e.v.9184" }
+  ];
+  const randomHint = HINTS[Math.floor(Math.random() * HINTS.length)];
+  const extraHintEl = document.getElementById("extra-hint");
+  if (extraHintEl) {
+    extraHintEl.innerHTML = `<a href="${randomHint.url}" target="_blank" rel="noopener">${randomHint.text}</a>`;
+  }
 }
 
 // ---------- Utils ----------
@@ -408,11 +277,3 @@ function shuffle(arr){
   return arr;
 }
 
-/* ==============================
-   ➕ So erweiterst du den Fragenpool auf 18+/Kategorie:
-   - Suche in QUESTION_BANK die gewünschte Kategorie (z. B. wind) und füge weitere
-     Frageobjekte am Ende des Arrays ein (siehe Struktur oben).
-   - Achte darauf, dass genau EINE Antwort pro Frage 'correct: true' hat.
-   - Nutze als Quelle bitte die entsprechende Seite auf www.carmen-ev.de.
-   - Antworten werden bei jeder Anzeige neu gemischt.
-   ==============================*/
