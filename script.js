@@ -61,17 +61,32 @@ fetch("https://evcarmen.github.io/CARMEN-quiz-app/questions.json")
   });
 
 // ---------- DOM-Elemente ----------
-// ---------- DOM-Elemente ----------
 const modeSection = document.getElementById('mode-selection');
 const catSection  = document.getElementById('category-selection');
+const quizSection = document.getElementById('quiz');
+const resultSection = document.getElementById('result');
 
-// Anfangszustand: Nur Modus-Auswahl sichtbar
+// ---------- Initialzustand ----------
+// Nur die Start-/Mode-Auswahl sichtbar machen
 modeSection.classList.remove('hidden');
 modeSection.classList.add('show');
 
+// Alle anderen Sektionen ausblenden
 catSection.classList.remove('show');
 catSection.classList.add('hidden');
 
+quizSection.classList.remove('show');
+quizSection.classList.add('hidden');
+
+resultSection.classList.remove('show');
+resultSection.classList.add('hidden');
+
+console.log("Initialzustand gesetzt:", {
+  mode: modeSection.className,
+  cat: catSection.className,
+  quiz: quizSection.className,
+  result: resultSection.className
+});
 
 // ---------- Start-Button ----------
 const startBtn = document.getElementById('start-quiz-btn');
