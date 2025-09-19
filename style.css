@@ -33,3 +33,17 @@ body{margin:0;font-family:'Century Gothic',Arial,sans-serif;background:var(--bg)
 .feedback.ok{color:var(--ok);animation:pop .4s ease;}
 .feedback.bad{color:var(--bad);animation:pop .4s ease;}
 @keyframes pop{0%{transform:scale(0.9);opacity:0}50%{transform:scale(1.05);opacity:1}100%{transform:scale(1);opacity:1}}
+.logo {
+  height: 80px;        /* moderat statt riesig */
+  width: auto;         /* proportional */
+  display: block;
+  margin: 0 auto 8px;  /* zentriert + Abstand nach unten */
+  animation: fadeIn 1s ease-in-out;
+}
+
+.app-header {
+  background: var(--carmen-green); /* CI-Farbe */
+  color: #fff;
+  text-align: center;
+  padding: 18px 12px 22px;
+}
