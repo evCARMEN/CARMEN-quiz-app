@@ -184,10 +184,12 @@ quizSection.classList.add('show');      // ← Animation starten
 // ---------- Frage rendern ----------
 function showQuestion(){
   if (idx >= currentQuestions.length) return endQuiz();
+ qEl.classList.remove('show');
 
   const q = currentQuestions[idx];
 
   qEl.textContent = q.question;
+   qEl.classList.add('show');
   answersEl.innerHTML = '';
   feedback.textContent = '';
   feedback.className = 'feedback';
