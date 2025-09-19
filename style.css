@@ -397,3 +397,32 @@ a:focus {
   animation: spin 2.5s cubic-bezier(.17,.67,.83,.67) forwards;
 }
 
+/* style.css */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .4s ease, transform .4s ease;
+  pointer-events: none;
+}
+
+section.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.feedback.ok {
+  color: #2a9d8f;
+  animation: pop .4s ease;
+}
+.feedback.bad {
+  color: #e76f51;
+  animation: pop .4s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.9); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
