@@ -73,8 +73,11 @@ startBtn.addEventListener('click', () => {
   modeSection.classList.add('hidden');
 
   // Kategorie-Buttons aufbauen und anzeigen
- buildCategoryButtons();
-catSection.classList.add('show');
+  buildCategoryButtons();
+
+  // Sichtbarkeit aktivieren + Animation
+  catSection.classList.remove('hidden');  // ← das fehlt aktuell!
+  catSection.classList.add('show');
 });
 
 const quizSection     = document.getElementById('quiz');
