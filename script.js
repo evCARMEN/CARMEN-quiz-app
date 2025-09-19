@@ -171,7 +171,10 @@ function startCategory(key){
   score = 0;
 
   catSection.classList.remove('show');
-quizSection.classList.add('show');
+catSection.classList.add('hidden'); // ← Kategorie-Sektion ausblenden
+
+quizSection.classList.remove('hidden'); // ← Quiz-Sektion sichtbar machen
+quizSection.classList.add('show');      // ← Animation starten
 
   titleEl.textContent = CATS[key].label;
   showQuestion();
