@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
@@ -6,9 +7,11 @@
   <title>C.A.R.M.E.N. Quiz-App</title>
 
   <!-- Styles -->
+
   <link rel="stylesheet" href="style.css" />
 
   <!-- Schrift: Century Gothic (Systemschrift) -->
+
   <style>
     body {
       font-family: 'Century Gothic', 'Arial', sans-serif;
@@ -16,9 +19,12 @@
   </style>
 
   <!-- Manifest & Theme -->
+
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#317EFB" />
   <meta name="color-scheme" content="light" />
+
+  <!-- Instagram Icon (optional) -->
 
   <link rel="icon" href="instagram-icon.png" type="image/png" />
 </head>
@@ -30,7 +36,7 @@
   </header>
 
   <main role="main">
-    <!-- Modus-Auswahl -->
+    <!-- Start/Modus-Auswahl -->
     <section id="mode-selection" class="card section-transition" role="region" aria-labelledby="mode-title">
       <h2 id="mode-title">Quiz starten</h2>
       <div class="mode-grid">
@@ -39,41 +45,46 @@
       <p class="hint">Wähle danach eine Kategorie aus, um das Quiz zu beginnen.</p>
     </section>
 
-    <!-- Kategorien-Auswahl -->
-    <section id="category-selection" class="card hidden section-transition" role="region" aria-labelledby="category-title">
-      <h2 id="category-title">Kategorie wählen</h2>
-      <div id="category-buttons" class="category-grid"></div>
-      <div class="wheel-wrapper">
-        <div class="wheel" id="wheel" aria-hidden="true"></div>
-        <button class="btn random" id="spin-btn">🎡 Zufallskategorie</button>
-      </div>
-      <p class="hint">Tipp: Probier das Glücksrad für eine zufällige Kategorie!</p>
-    </section>
+```
+<!-- Kategorien-Auswahl -->
+<section id="category-selection" class="card hidden section-transition" role="region" aria-labelledby="category-title">
+  <h2 id="category-title">Kategorie wählen</h2>
+  <div id="category-buttons" class="category-grid"></div>
 
-    <!-- Quizbereich -->
-    <section id="quiz" class="card hidden section-transition" role="region" aria-labelledby="quiz-title">
-      <div class="quiz-header">
-        <h2 id="quiz-title">Quiz</h2>
-        <div id="progress" aria-live="polite"></div>
-      </div>
-      <div id="question" class="question question-animate"></div>
-      <div id="answers" class="answers"></div>
-      <div id="feedback" class="feedback" aria-live="assertive"></div>
-      <div id="source" class="source"></div>
-      <div class="controls">
-        <button class="btn secondary" id="back-btn">Zurück</button>
-        <button class="btn primary hidden" id="next-btn">Nächste Frage</button>
-      </div>
-    </section>
+  <div class="wheel-wrapper">
+    <div class="wheel" id="wheel" aria-hidden="true"></div>
+    <button class="btn random" id="spin-btn">🎡 Zufallskategorie</button>
+  </div>
+  <p class="hint">Tipp: Probier das Glücksrad für eine zufällige Kategorie!</p>
+</section>
 
-    <!-- Ergebnis -->
-    <section id="result" class="card hidden" role="region" aria-labelledby="result-title">
-      <h2 id="result-title">Auswertung</h2>
-      <p id="score"></p>
-      <div id="breakdown"></div>
-      <div id="extra-hint" class="extra-hint"></div>
-      <button class="btn primary" id="restart-btn">Neues Quiz</button>
-    </section>
+<!-- Quizbereich -->
+<section id="quiz" class="card hidden section-transition" role="region" aria-labelledby="quiz-title">
+  <div class="quiz-header">
+    <h2 id="quiz-title">Quiz</h2>
+    <div id="progress" aria-live="polite"></div>
+  </div>
+
+  <div id="question" class="question question-animate"></div>
+  <div id="answers" class="answers"></div>
+  <div id="feedback" class="feedback" aria-live="assertive"></div>
+  <div id="source" class="source"></div>
+  <div class="controls">
+    <button class="btn secondary" id="back-btn">Zurück</button>
+    <button class="btn primary hidden" id="next-btn">Nächste Frage</button>
+  </div>
+</section>
+
+<!-- Ergebnis -->
+<section id="result" class="card hidden" role="region" aria-labelledby="result-title">
+  <h2 id="result-title">Auswertung</h2>
+  <p id="score"></p>
+  <div id="breakdown"></div>
+  <div id="extra-hint" class="extra-hint"></div>
+  <button class="btn primary" id="restart-btn">Neues Quiz</button>
+</section>
+```
+
   </main>
 
   <footer class="app-footer" role="contentinfo">
@@ -88,11 +99,12 @@
   </footer>
 
   <script src="script.js"></script>
+
   <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js');
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
     }
   </script>
+
 </body>
 </html>
-
