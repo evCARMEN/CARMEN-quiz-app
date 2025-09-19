@@ -14,8 +14,8 @@
   </header>
 
   <main>
-    <!-- Startscreen -->
-    <section id="mode-selection" class="card section-transition">
+    <!-- Startseite / Modus-Auswahl -->
+    <section id="mode-selection" class="card section-transition show">
       <h2>Quiz starten</h2>
       <div class="mode-grid">
         <button class="btn mode" id="start-quiz-btn">Jetzt starten</button>
@@ -27,9 +27,8 @@
     <section id="category-selection" class="card hidden section-transition">
       <h2>Kategorie wählen</h2>
       <div id="category-buttons" class="category-grid"></div>
-
       <div class="wheel-wrapper">
-        <div id="wheel" class="wheel" aria-hidden="true"></div>
+        <div class="wheel" id="wheel"></div>
         <button class="btn random" id="spin-btn">🎡 Zufallskategorie</button>
       </div>
       <p class="hint">Tipp: Probier das Glücksrad für eine zufällige Kategorie!</p>
@@ -41,12 +40,10 @@
         <h2 id="quiz-title">Quiz</h2>
         <div id="progress" aria-live="polite"></div>
       </div>
-
       <div id="question" class="question question-animate"></div>
       <div id="answers" class="answers"></div>
       <div id="feedback" class="feedback" aria-live="assertive"></div>
       <div id="source" class="source"></div>
-
       <div class="controls">
         <button class="btn secondary" id="back-btn">Zurück</button>
         <button class="btn primary hidden" id="next-btn">Nächste Frage</button>
@@ -54,7 +51,7 @@
     </section>
 
     <!-- Ergebnis -->
-    <section id="result" class="card hidden section-transition">
+    <section id="result" class="card hidden">
       <h2>Auswertung</h2>
       <p id="score"></p>
       <div id="breakdown"></div>
@@ -64,10 +61,10 @@
   </main>
 
   <footer class="app-footer">
-    <small>
-      &copy; C.A.R.M.E.N. e.V. –
-      <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/impressum/" target="_blank">Impressum</a> |
-      <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/datenschutzerklaerung/" target="_blank">Datenschutz</a>
+    <small>&copy; C.A.R.M.E.N. e.V. – 
+      <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/impressum/" target="_blank">Impressum</a> | 
+      <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/datenschutzerklaerung/" target="_blank">Datenschutz</a> |
+      <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/agb/" target="_blank">AGB</a>
     </small>
   </footer>
 
