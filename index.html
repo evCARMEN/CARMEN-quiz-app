@@ -20,7 +20,6 @@
   <meta name="theme-color" content="#317EFB" />
   <meta name="color-scheme" content="light" />
 
-  <!-- Instagram Icon (optional, lokal) -->
   <link rel="icon" href="instagram-icon.png" type="image/png" />
 </head>
 <body>
@@ -31,7 +30,7 @@
   </header>
 
   <main role="main">
-    <!-- Startbildschirm / Modus-Auswahl -->
+    <!-- Modus-Auswahl -->
     <section id="mode-selection" class="card section-transition" role="region" aria-labelledby="mode-title">
       <h2 id="mode-title">Quiz starten</h2>
       <div class="mode-grid">
@@ -44,7 +43,6 @@
     <section id="category-selection" class="card hidden section-transition" role="region" aria-labelledby="category-title">
       <h2 id="category-title">Kategorie wählen</h2>
       <div id="category-buttons" class="category-grid"></div>
-
       <div class="wheel-wrapper">
         <div class="wheel" id="wheel" aria-hidden="true"></div>
         <button class="btn random" id="spin-btn">🎡 Zufallskategorie</button>
@@ -58,7 +56,6 @@
         <h2 id="quiz-title">Quiz</h2>
         <div id="progress" aria-live="polite"></div>
       </div>
-
       <div id="question" class="question question-animate"></div>
       <div id="answers" class="answers"></div>
       <div id="feedback" class="feedback" aria-live="assertive"></div>
@@ -98,3 +95,4 @@
   </script>
 </body>
 </html>
+
