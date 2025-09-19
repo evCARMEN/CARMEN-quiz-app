@@ -165,15 +165,41 @@ function spinWheel(){
   const targetIndex = Math.floor(Math.random() * keys.length);
   const spins = 5; // volle Runden
   const sliceDeg = 360 / keys.length;
-  const endDeg = spins*360 + targetIndex * sliceDeg + (sliceDeg/2);
+  const endDeg = spins * 360 + targetIndex * sliceDeg + (sliceDeg / 2);
 
+  // Glow-Effekt aktivieren
+  wheel.classList.add('spin-glow');
+
+  // Button-Animation (optional)
+  spinBtn.classList.add('spin-anim');
+  setTimeout(() => spinBtn.classList.remove('spin-anim'), 600);
+
+  // Rad drehen
   wheel.style.transition = 'transform 2.2s cubic-bezier(.19,1,.22,1)';
   wheel.style.transform = `rotate(${endDeg}deg)`;
 
   spinBtn.disabled = true;
+
   setTimeout(() => {
-    spinBtn.disabled = false;
-    startCategory(keys[targetIndex]);
+    wheel.classList.remove('spin-glow');
+
+    // Kategorie-Vorschau anzeigen
+    const selectedKey = keys[targetIndex];
+    const selectedCat = CATS[selectedKey];
+    spinBtn.textContent = `🎯 ${selectedCat.label}`;
+    spinBtn.style.background = selectedCat.color;
+
+    // Pfeil wackeln lassen (optional)
+    wheel.classList.add('spin-tick');
+    setTimeout(() => wheel.classList.remove('spin-tick'), 1000);
+
+    // Quiz starten nach kurzer Pause
+    setTimeout(() => {
+      spinBtn.textContent = '🎡 Zufallskategorie';
+      spinBtn.style.background = '#444';
+      spinBtn.disabled = false;
+      startCategory(selectedKey);
+    }, 1800);
   }, 2300);
 }
 
