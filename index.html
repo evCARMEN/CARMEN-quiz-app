@@ -20,7 +20,7 @@
   <meta name="theme-color" content="#317EFB" />
   <meta name="color-scheme" content="light" />
 
-  <!-- Icon (optional) -->
+  <!-- Instagram Icon (optional, lokal) -->
   <link rel="icon" href="instagram-icon.png" type="image/png" />
 </head>
 <body>
@@ -31,7 +31,7 @@
   </header>
 
   <main role="main">
-    <!-- Modus-Auswahl -->
+    <!-- Startbildschirm / Modus-Auswahl -->
     <section id="mode-selection" class="card section-transition" role="region" aria-labelledby="mode-title">
       <h2 id="mode-title">Quiz starten</h2>
       <div class="mode-grid">
@@ -41,7 +41,7 @@
     </section>
 
     <!-- Kategorien-Auswahl -->
-    <section id="category-selection" class="card section-transition" role="region" aria-labelledby="category-title">
+    <section id="category-selection" class="card hidden section-transition" role="region" aria-labelledby="category-title">
       <h2 id="category-title">Kategorie wählen</h2>
       <div id="category-buttons" class="category-grid"></div>
 
@@ -53,7 +53,7 @@
     </section>
 
     <!-- Quizbereich -->
-    <section id="quiz" class="card section-transition" role="region" aria-labelledby="quiz-title">
+    <section id="quiz" class="card hidden section-transition" role="region" aria-labelledby="quiz-title">
       <div class="quiz-header">
         <h2 id="quiz-title">Quiz</h2>
         <div id="progress" aria-live="polite"></div>
@@ -70,7 +70,7 @@
     </section>
 
     <!-- Ergebnis -->
-    <section id="result" class="card section-transition" role="region" aria-labelledby="result-title">
+    <section id="result" class="card hidden" role="region" aria-labelledby="result-title">
       <h2 id="result-title">Auswertung</h2>
       <p id="score"></p>
       <div id="breakdown"></div>
@@ -92,10 +92,9 @@
 
   <script src="script.js"></script>
   <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("service-worker.js");
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
     }
   </script>
 </body>
 </html>
-
