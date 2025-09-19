@@ -385,3 +385,15 @@ a:focus {
   opacity: 1;
   transform: translateY(0);
 }
+/* style.css Ergänzung */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  90% { transform: rotate(var(--end-deg)); }
+  95% { transform: rotate(calc(var(--end-deg) - 10deg)); }
+  100% { transform: rotate(var(--end-deg)); }
+}
+
+#wheel.spinning {
+  animation: spin 2.5s cubic-bezier(.17,.67,.83,.67) forwards;
+}
+
