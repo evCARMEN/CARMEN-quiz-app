@@ -20,7 +20,7 @@
   <meta name="theme-color" content="#317EFB" />
   <meta name="color-scheme" content="light" />
 
-  <!-- Instagram Icon (optional, falls du es lokal einbindest) -->
+  <!-- Icon (optional) -->
   <link rel="icon" href="instagram-icon.png" type="image/png" />
 </head>
 <body>
@@ -32,7 +32,7 @@
 
   <main role="main">
     <!-- Modus-Auswahl -->
-    <section id="mode-selection" class="card" role="region" aria-labelledby="mode-title">
+    <section id="mode-selection" class="card section-transition" role="region" aria-labelledby="mode-title">
       <h2 id="mode-title">Quiz starten</h2>
       <div class="mode-grid">
         <button class="btn mode" id="start-quiz-btn">Jetzt starten</button>
@@ -41,8 +41,7 @@
     </section>
 
     <!-- Kategorien-Auswahl -->
-   <section id="category-selection" class="card section-transition" role="region" aria-labelledby="category-title">
-
+    <section id="category-selection" class="card section-transition" role="region" aria-labelledby="category-title">
       <h2 id="category-title">Kategorie wählen</h2>
       <div id="category-buttons" class="category-grid"></div>
 
@@ -54,7 +53,7 @@
     </section>
 
     <!-- Quizbereich -->
-    <section id="quiz" class="card hidden section-transition" role="region" aria-labelledby="quiz-title">
+    <section id="quiz" class="card section-transition" role="region" aria-labelledby="quiz-title">
       <div class="quiz-header">
         <h2 id="quiz-title">Quiz</h2>
         <div id="progress" aria-live="polite"></div>
@@ -71,7 +70,7 @@
     </section>
 
     <!-- Ergebnis -->
-    <section id="result" class="card hidden" role="region" aria-labelledby="result-title">
+    <section id="result" class="card section-transition" role="region" aria-labelledby="result-title">
       <h2 id="result-title">Auswertung</h2>
       <p id="score"></p>
       <div id="breakdown"></div>
@@ -86,8 +85,7 @@
         &copy; C.A.R.M.E.N. e.V. –
         <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/impressum/" target="_blank" rel="noopener">Impressum</a> |
         <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutz</a> |
-        <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/agb/" target="_blank" rel="noopener">AGB</a> |
-             </a>
+        <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/agb/" target="_blank" rel="noopener">AGB</a>
       </small>
     </nav>
   </footer>
