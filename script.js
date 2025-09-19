@@ -111,13 +111,22 @@ spinBtn.addEventListener('click', spinWheel);
 buildCategoryButtons();
 
 // ---------- UI-Aufbau ----------
-function buildCategoryButtons(){
+function buildCategoryButtons() {
   catButtonsWrap.innerHTML = '';
+
   Object.entries(CATS).forEach(([key, val]) => {
     const b = document.createElement('button');
     b.className = 'category-btn';
     b.style.background = val.color;
-    b.textContent = val.label;
+
+    // Kategorien mit LSE-Logo
+    const showLogo = ['wind', 'sun', 'heat', 'eff'].includes(key);
+    const labelText = val.label.replace(/\s*\(LandSchafftEnergie\)/, '');
+
+    b.innerHTML = showLogo
+      ? `<span class="cat-label">${labelText}</span><img src="assets/icons/LandSchafftEnergie.png" alt="LandSchafftEnergie" class="lse-icon">`
+      : `<span class="cat-label">${val.label}</span>`;
+
     b.addEventListener('click', () => startCategory(key));
     catButtonsWrap.appendChild(b);
   });
