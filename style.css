@@ -47,3 +47,49 @@ body{margin:0;font-family:'Century Gothic',Arial,sans-serif;background:var(--bg)
   text-align: center;
   padding: 18px 12px 22px;
 }
+.mode-grid {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn.mode {
+  background: var(--wind);
+  color: #fff;
+  padding: 14px 24px;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0,0,0,.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.btn.mode:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0,0,0,.1);
+}
+.wheel {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: conic-gradient(var(--wind) 0 45deg, var(--sun) 45deg 90deg, ...);
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  transition: transform 2s cubic-bezier(.19,1,.22,1);
+}
+.wheel.spin-glow {
+  box-shadow: 0 0 20px 6px rgba(255, 255, 255, 0.6);
+}
+
+.category-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 14px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
