@@ -1,6 +1,4 @@
-/* ==============================
-   C.A.R.M.E.N. Quiz-App – Bereinigte Logik
-   =================================*/
+/* Bereinigtes Script.js – Fehlerhafte Klammern korrigiert */
 
 // ---------- Globale States ----------
 let MODE = null;
@@ -59,7 +57,6 @@ startBtn.addEventListener('click', () => {
   catSection.classList.remove('hidden');
   catSection.classList.add('show');
 });
-
 backBtn.addEventListener('click', resetToCategories);
 restartBtn.addEventListener('click', resetToCategories);
 nextBtn.addEventListener('click', nextQuestion);
@@ -86,9 +83,7 @@ function spinWheel(){
   const sliceDeg = 360 / keys.length;
   const endDeg = 5*360 + targetIndex*sliceDeg + sliceDeg/2;
   wheel.style.setProperty('--end-deg', `${endDeg}deg`);
-  wheel.classList.remove('spinning');
-  void wheel.offsetWidth;
-  wheel.classList.add('spinning');
+  wheel.classList.remove('spinning'); void wheel.offsetWidth; wheel.classList.add('spinning');
   spinBtn.disabled = true;
   wheel.addEventListener('animationend', () => {
     const selectedKey = keys[targetIndex];
@@ -105,16 +100,12 @@ function spinWheel(){
 }
 
 function startCategory(key){
-  CURRENT_CAT_KEY = key;
-  CURRENT_COLOR = CATS[key].color;
+  CURRENT_CAT_KEY = key; CURRENT_COLOR = CATS[key].color;
   const pool = QUESTION_BANK[key] ? [...QUESTION_BANK[key]] : [];
-  shuffle(pool);
-  currentQuestions = pool.slice(0,QUESTIONS_PER_ROUND);
+  shuffle(pool); currentQuestions = pool.slice(0,QUESTIONS_PER_ROUND);
   idx=0; score=0;
-  catSection.classList.remove('show');
-  catSection.classList.add('hidden');
-  quizSection.classList.remove('hidden');
-  quizSection.classList.add('show');
+  catSection.classList.remove('show'); catSection.classList.add('hidden');
+  quizSection.classList.remove('hidden'); quizSection.classList.add('show');
   titleEl.textContent = CATS[key].label;
   showQuestion();
 }
@@ -123,15 +114,12 @@ function showQuestion(){
   if(idx>=currentQuestions.length) return endQuiz();
   qEl.classList.remove('show');
   const q = currentQuestions[idx];
-  qEl.textContent = q.question;
-  qEl.classList.add('show');
-  answersEl.innerHTML='';
-  feedback.textContent=''; feedback.className='feedback';
+  qEl.textContent = q.question; qEl.classList.add('show');
+  answersEl.innerHTML=''; feedback.textContent=''; feedback.className='feedback';
   shuffle([...q.answers]).forEach(a=>{
     const btn = document.createElement('button');
     btn.className='answer-btn'; btn.textContent=a.text; btn.dataset.correct=a.correct;
-    btn.addEventListener('click',()=>handleAnswer(btn,a.correct,q.source));
-    answersEl.appendChild(btn);
+    btn.addEventListener('click',()=>handleAnswer(btn,a.correct,q.source)); answersEl.appendChild(btn);
   });
   progress.textContent = `Frage ${idx+1} / ${currentQuestions.length}`;
   nextBtn.classList.add('hidden'); sourceEl.innerHTML='';
@@ -180,6 +168,17 @@ function endQuiz(){
     const hint=HINTS[Math.floor(Math.random()*HINTS.length)];
     extraHintEl.innerHTML='';
     const container=document.createElement('div'); container.className='hint-content';
-    const iconFile=hint.url.includes('instagram')?'instagram.png':hint.url.includes('facebook')?'facebook.png':hint.url.includes('linkedin')?'linkedin.png':hint.url.includes('youtube')?'youtube.png':hint.url.includes('newsletter')?'newsletter.png':hint.url.includes('carmen-ev.de')?'calendar.png':null;
+    const iconFile = hint.url.includes('instagram')?'instagram.png':hint.url.includes('facebook')?'facebook.png':hint.url.includes('linkedin')?'linkedin.png':hint.url.includes('youtube')?'youtube.png':hint.url.includes('newsletter')?'newsletter.png':hint.url.includes('carmen-ev.de')?'calendar.png':null;
     if(iconFile){ const img=document.createElement('img'); img.src=`assets/icons/${iconFile}`; img.alt=hint.text; img.className='hint-icon'; container.appendChild(img); }
-    const link=document.createElement('a'); link.href
+    const link=document.createElement('a'); link.href=hint.url; link.target='_blank'; link.rel='noopener'; link.textContent=hint.text; container.appendChild(link);
+    extraHintEl.appendChild(container);
+  }
+}
+
+function resetToCategories(){
+  quizSection.classList.add('hidden'); resultSection.classList.add('hidden');
+  idx=0; score=0; currentQuestions=[];
+  buildCategoryButtons(); catSection.classList.remove('hidden'); catSection.classList.add('show');
+}
+
+function shuffle(arr){for(let i=arr.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[arr[i],arr[j]]=[arr[j],arr[i]];}return arr;}
