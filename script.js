@@ -106,7 +106,19 @@ backBtn.addEventListener('click', () => {
 
 restartBtn.addEventListener('click', () => {
   resultSection.classList.add('hidden');
+
+  // Quiz zurücksetzen
+  idx = 0;
+  score = 0;
+  currentQuestions = [];
+
+  // Kategorie-Bereich neu aufbauen und anzeigen
+  buildCategoryButtons();
   catSection.classList.remove('hidden');
+  catSection.classList.add('show');
+
+  // Quiz-Bereich ausblenden
+  quizSection.classList.add('hidden');
 });
 
 nextBtn.addEventListener('click', nextQuestion);
