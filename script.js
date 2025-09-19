@@ -100,8 +100,18 @@ const restartBtn= document.getElementById('restart-btn');
 
 // ---------- Initialisierung ----------
 backBtn.addEventListener('click', () => {
+  // Quizbereich ausblenden
   quizSection.classList.add('hidden');
+
+  // Quiz-Zustand zurücksetzen
+  idx = 0;
+  score = 0;
+  currentQuestions = [];
+
+  // Kategorie-Bereich neu aufbauen und anzeigen
+  buildCategoryButtons();
   catSection.classList.remove('hidden');
+  catSection.classList.add('show');
 });
 
 restartBtn.addEventListener('click', () => {
