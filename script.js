@@ -99,8 +99,8 @@ startBtn.addEventListener('click', () => {
   buildCategoryButtons();
 
   // Sichtbarkeit aktivieren + Animation
-  catSection.classList.remove('hidden');  // ← das fehlt aktuell!
-  catSection.classList.add('show');
+  catSection.classList.remove('hidden');  
+  // catSection.classList.add('show');
 });
 
 const quizSection     = document.getElementById('quiz');
