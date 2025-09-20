@@ -289,3 +289,62 @@ button:focus, a:focus {
   outline: 2px solid #005fcc;
   outline-offset: 2px;
 }
+.wheel-container {
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+
+.wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--wind) 0 45deg,
+    var(--sun) 45deg 90deg,
+    var(--heat) 90deg 135deg,
+    var(--eff) 135deg 180deg,
+    var(--biogas) 180deg 225deg,
+    var(--wood) 225deg 270deg,
+    var(--mat) 270deg 315deg,
+    var(--sust) 315deg 360deg
+  );
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.wheel-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.wheel-center img {
+  max-width: 70%;
+  height: auto;
+}
+
+.wheel-pointer {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+  border-bottom: 20px solid #222;
+  z-index: 10;
+}
