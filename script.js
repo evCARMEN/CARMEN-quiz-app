@@ -160,7 +160,8 @@ function buildCategoryButtons() {
 }
 
 // ---------- Glücksrad ----------
-function spinWheel(){
+// ---------- Glücksrad ----------
+function spinWheel() {
   const keys = Object.keys(CATS);
   const targetIndex = Math.floor(Math.random() * keys.length);
   const spins = 5; // volle Runden
@@ -170,26 +171,35 @@ function spinWheel(){
   // Glow-Effekt aktivieren
   wheel.classList.add('spin-glow');
 
-  // Button-Animation (optional)
+  // Button-Animation
   spinBtn.classList.add('spin-anim');
   setTimeout(() => spinBtn.classList.remove('spin-anim'), 600);
 
-  // Rad drehen
-  wheel.style.transition = 'transform 2.2s cubic-bezier(.19,1,.22,1)';
-  wheel.style.transform = `rotate(${endDeg}deg)`;
+  // Rad zurücksetzen und neue Rotation starten
+  wheel.style.transition = 'none';
+  wheel.offsetHeight; // reflow for reset
+  wheel.style.transform = 'rotate(0deg)';
+
+  // kurze Verzögerung für sauberen Start
+  setTimeout(() => {
+    wheel.style.transition = 'transform 2.2s cubic-bezier(.19,1,.22,1)';
+    wheel.style.transform = `rotate(${endDeg}deg)`;
+  }, 50);
 
   spinBtn.disabled = true;
 
   setTimeout(() => {
     wheel.classList.remove('spin-glow');
 
-    // Kategorie-Vorschau anzeigen
+    // Kategorie ermitteln
     const selectedKey = keys[targetIndex];
     const selectedCat = CATS[selectedKey];
+
+    // Button anpassen
     spinBtn.textContent = `🎯 ${selectedCat.label}`;
     spinBtn.style.background = selectedCat.color;
 
-    // Pfeil wackeln lassen (optional)
+    // Tick-Animation am Pfeil
     wheel.classList.add('spin-tick');
     setTimeout(() => wheel.classList.remove('spin-tick'), 1000);
 
