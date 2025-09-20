@@ -1,45 +1,64 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>C.A.R.M.E.N. Quiz-App</title>
-  <link rel="stylesheet" href="style.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Schrift: Century Gothic (Systemschrift) -->
+  <style>
+    body {
+      font-family: 'Century Gothic', 'Arial', sans-serif;
+    }
+  </style>
+
+  <!-- Manifest & Theme -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#317EFB" />
+  <meta name="color-scheme" content="light" />
+
+  <!-- Instagram Icon (optional, falls du es lokal einbindest) -->
+  <link rel="icon" href="instagram-icon.png" type="image/png" />
 </head>
 <body>
-  <header class="app-header">
-    <img src="assets/logo/CARMEN_transparent.png" alt="Logo von C.A.R.M.E.N. e.V." class="logo">
+  <header class="app-header" role="banner">
+    <img src="CARMEN_transparent.png" alt="Logo von C.A.R.M.E.N. e.V." class="logo" />
     <h1>C.A.R.M.E.N. Quiz-App</h1>
     <p class="subtitle">Erneuerbare Energien & Nachwachsende Rohstoffe</p>
   </header>
 
-  <main>
-    <!-- Startseite / Modus-Auswahl -->
-    <section id="mode-selection" class="card section-transition show">
-      <h2>Quiz starten</h2>
+  <main role="main">
+    <!-- Modus-Auswahl -->
+    <section id="mode-selection" class="card" role="region" aria-labelledby="mode-title">
+      <h2 id="mode-title">Quiz starten</h2>
       <div class="mode-grid">
         <button class="btn mode" id="start-quiz-btn">Jetzt starten</button>
       </div>
       <p class="hint">Wähle danach eine Kategorie aus, um das Quiz zu beginnen.</p>
     </section>
 
-    <!-- Kategorie-Auswahl -->
-    <section id="category-selection" class="card hidden section-transition">
-      <h2>Kategorie wählen</h2>
+    <!-- Kategorien-Auswahl -->
+    <section id="category-selection" class="card hidden section-transition" role="region" aria-labelledby="category-title">
+      <h2 id="category-title">Kategorie wählen</h2>
       <div id="category-buttons" class="category-grid"></div>
+
       <div class="wheel-wrapper">
-        <div class="wheel" id="wheel"></div>
+        <div class="wheel" id="wheel" aria-hidden="true"></div>
         <button class="btn random" id="spin-btn">🎡 Zufallskategorie</button>
       </div>
       <p class="hint">Tipp: Probier das Glücksrad für eine zufällige Kategorie!</p>
     </section>
 
     <!-- Quizbereich -->
-    <section id="quiz" class="card hidden section-transition">
+    <section id="quiz" class="card hidden section-transition" role="region" aria-labelledby="quiz-title">
       <div class="quiz-header">
         <h2 id="quiz-title">Quiz</h2>
         <div id="progress" aria-live="polite"></div>
       </div>
+
       <div id="question" class="question question-animate"></div>
       <div id="answers" class="answers"></div>
       <div id="feedback" class="feedback" aria-live="assertive"></div>
@@ -51,8 +70,8 @@
     </section>
 
     <!-- Ergebnis -->
-    <section id="result" class="card hidden">
-      <h2>Auswertung</h2>
+    <section id="result" class="card hidden" role="region" aria-labelledby="result-title">
+      <h2 id="result-title">Auswertung</h2>
       <p id="score"></p>
       <div id="breakdown"></div>
       <div id="extra-hint" class="extra-hint"></div>
@@ -60,14 +79,24 @@
     </section>
   </main>
 
-  <footer class="app-footer">
-    <small>&copy; C.A.R.M.E.N. e.V. – 
-      <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/impressum/" target="_blank">Impressum</a> | 
-      <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/datenschutzerklaerung/" target="_blank">Datenschutz</a> |
-      <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/agb/" target="_blank">AGB</a>
-    </small>
+  <footer class="app-footer" role="contentinfo">
+    <nav aria-label="Rechtliches">
+      <small>
+        &copy; C.A.R.M.E.N. e.V. –
+        <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/impressum/" target="_blank" rel="noopener">Impressum</a> |
+        <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutz</a> |
+        <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/agb/" target="_blank" rel="noopener">AGB</a> |
+             </a>
+      </small>
+    </nav>
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js");
+    }
+  </script>
 </body>
 </html>
+
