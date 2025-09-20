@@ -20,7 +20,7 @@
   <meta name="theme-color" content="#317EFB" />
   <meta name="color-scheme" content="light" />
 
-  <!-- Instagram Icon (optional, falls du es lokal einbindest) -->
+  <!-- Favicon -->
   <link rel="icon" href="instagram-icon.png" type="image/png" />
 </head>
 <body>
@@ -45,10 +45,24 @@
       <h2 id="category-title">Kategorie wählen</h2>
       <div id="category-buttons" class="category-grid"></div>
 
+      <!-- Neues Glücksrad -->
       <div class="wheel-wrapper">
-        <div class="wheel" id="wheel" aria-hidden="true"></div>
-        <button class="btn random" id="spin-btn">🎡 Zufallskategorie</button>
+        <div class="wheel-container">
+          <div id="wheel" class="wheel"></div>
+
+          <!-- Logo in der Mitte -->
+          <div class="wheel-center">
+            <img src="assets/carmen-logo-symbol.png" alt="C.A.R.M.E.N. Logo" />
+          </div>
+
+          <!-- Fester Pfeil -->
+          <div class="wheel-pointer"></div>
+        </div>
+
+        <!-- Spin-Button -->
+        <button id="spin-btn" class="btn random">🎡 Zufallskategorie</button>
       </div>
+
       <p class="hint">Tipp: Probier das Glücksrad für eine zufällige Kategorie!</p>
     </section>
 
@@ -85,8 +99,7 @@
         &copy; C.A.R.M.E.N. e.V. –
         <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/impressum/" target="_blank" rel="noopener">Impressum</a> |
         <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/datenschutzerklaerung/" target="_blank" rel="noopener">Datenschutz</a> |
-        <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/agb/" target="_blank" rel="noopener">AGB</a> |
-             </a>
+        <a href="https://www.carmen-ev.de/c-a-r-m-e-n-e-v/agb/" target="_blank" rel="noopener">AGB</a>
       </small>
     </nav>
   </footer>
@@ -99,4 +112,3 @@
   </script>
 </body>
 </html>
-
