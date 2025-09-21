@@ -150,12 +150,12 @@ function buildCategoryButtons() {
     const showLogo = ['wind', 'sun', 'heat', 'eff'].includes(key);
     const labelText = val.label.replace(/\s*\(LandSchafftEnergie\)/, '');
 
-    b.innerHTML = showLogo
-  ? `<span class="cat-label">${labelText}</span>
-     <span class="lse-circle">
-       <img src="assets/icons/LandSchafftEnergie.png" alt="LandSchafftEnergie" class="lse-icon">
-     </span>`
-  : `<span class="cat-label">${val.label}</span>`;
+    b.innerHTML = `
+  <span class="cat-label">${labelText}</span>
+  <span class="lse-circle">
+    ${showLogo ? `<img src="assets/icons/LandSchafftEnergie.png" alt="LandSchafftEnergie" class="lse-icon">` : ``}
+  </span>
+`;
 
     b.addEventListener('click', () => startCategory(key));
     catButtonsWrap.appendChild(b);
