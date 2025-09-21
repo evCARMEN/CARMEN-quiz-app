@@ -146,16 +146,26 @@ function buildCategoryButtons() {
     b.className = 'category-btn';
     b.style.background = val.color;
 
-    // Kategorien mit LSE-Logo
-    const showLogo = ['wind', 'sun', 'heat', 'eff'].includes(key);
-    const labelText = val.label.replace(/\s*\(LandSchafftEnergie\)/, '');
+    // Label immer
+    const label = document.createElement("span");
+    label.className = "cat-label";
+    label.textContent = val.label.replace(/\s*\(LandSchafftEnergie\)/, "");
+    b.appendChild(label);
 
-    b.innerHTML = `
-  <span class="cat-label">${labelText}</span>
-  <span class="lse-circle">
-    ${showLogo ? `<img src="assets/icons/LandSchafftEnergie.png" alt="LandSchafftEnergie" class="lse-icon">` : ``}
-  </span>
-`;
+    // Nur bei bestimmten Kategorien den Logo-Kreis einfügen
+    const showLogo = ['wind', 'sun', 'heat', 'eff'].includes(key);
+    if (showLogo) {
+      const circle = document.createElement("span");
+      circle.className = "lse-circle";
+
+      const img = document.createElement("img");
+      img.src = "assets/icons/LandSchafftEnergie.png";
+      img.alt = "LandSchafftEnergie";
+      img.className = "lse-icon";
+
+      circle.appendChild(img);
+      b.appendChild(circle);
+    }
 
     b.addEventListener('click', () => startCategory(key));
     catButtonsWrap.appendChild(b);
