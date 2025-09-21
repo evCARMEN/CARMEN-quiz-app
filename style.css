@@ -442,3 +442,20 @@ button:focus, a:focus {
   width: 26px;
   height: auto;
 }
+.pointer {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 18px solid #222;
+  z-index: 10;
+}
+
+/* kleine Wackelanimation */
+.pointer.spin-tick {
+  animation: tick 0.3s ease-in-out 3;
+}
