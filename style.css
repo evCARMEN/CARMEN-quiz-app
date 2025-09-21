@@ -348,3 +348,21 @@ button:focus, a:focus {
   border-bottom: 20px solid #222;
   z-index: 10;
 }
+
+.lse-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;           /* Weißer Kreis */
+  border-radius: 50%;         /* Rund machen */
+  padding: 6px;               /* Luft rundherum */
+  width: 40px; 
+  height: 40px;
+  flex-shrink: 0;             /* nicht schrumpfen */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* dezenter Schatten */
+}
+
+.lse-icon {
+  width: 24px;
+  height: auto;
+}
