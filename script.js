@@ -179,21 +179,23 @@ function spinWheel() {
   const targetIndex = Math.floor(Math.random() * keys.length);
   const spins = 5; // volle Runden
   const sliceDeg = 360 / keys.length;
-  const endDeg = spins * 360 + targetIndex * sliceDeg + (sliceDeg / 2);
 
-  // Glow-Effekt aktivieren
+  // Berechne Zielwinkel so, dass die Kategorie genau am Pfeil steht
+  const endDeg = spins * 360 - targetIndex * sliceDeg - sliceDeg / 2;
+
+  // Glow-Effekt
   wheel.classList.add('spin-glow');
 
-  // Button-Animation
+  // Button Animation
   spinBtn.classList.add('spin-anim');
   setTimeout(() => spinBtn.classList.remove('spin-anim'), 600);
 
-  // Rad zurücksetzen und neue Rotation starten
+  // Reset Rotation
   wheel.style.transition = 'none';
-  wheel.offsetHeight; // reflow for reset
+  wheel.offsetHeight; // reflow
   wheel.style.transform = 'rotate(0deg)';
 
-  // kurze Verzögerung für sauberen Start
+  // Starte neue Rotation
   setTimeout(() => {
     wheel.style.transition = 'transform 2.2s cubic-bezier(.19,1,.22,1)';
     wheel.style.transform = `rotate(${endDeg}deg)`;
@@ -204,19 +206,19 @@ function spinWheel() {
   setTimeout(() => {
     wheel.classList.remove('spin-glow');
 
-    // Kategorie ermitteln
     const selectedKey = keys[targetIndex];
     const selectedCat = CATS[selectedKey];
 
-    // Button anpassen
+    // Button Label ändern
     spinBtn.textContent = `🎯 ${selectedCat.label}`;
     spinBtn.style.background = selectedCat.color;
 
-    // Tick-Animation am Pfeil
-    wheel.classList.add('spin-tick');
-    setTimeout(() => wheel.classList.remove('spin-tick'), 1000);
+    // Pfeil wackeln lassen
+    const pointer = document.querySelector('.wheel-pointer');
+    pointer.classList.add('spin-tick');
+    setTimeout(() => pointer.classList.remove('spin-tick'), 1000);
 
-    // Quiz starten nach kurzer Pause
+    // Quiz starten
     setTimeout(() => {
       spinBtn.textContent = '🎡 Zufallskategorie';
       spinBtn.style.background = '#444';
