@@ -136,6 +136,7 @@ nextBtn.addEventListener('click', nextQuestion);
 spinBtn.addEventListener('click', spinWheel);
 
 buildCategoryButtons();
+buildWheelColors();
 
 // ---------- UI-Aufbau ----------
 function buildCategoryButtons() {
@@ -170,6 +171,21 @@ function buildCategoryButtons() {
     b.addEventListener('click', () => startCategory(key));
     catButtonsWrap.appendChild(b);
   });
+}
+
+function buildWheelColors() {
+  const keys = Object.keys(CATS);
+  const slice = 360 / keys.length;
+
+  let gradientParts = [];
+  keys.forEach((key, i) => {
+    const color = CATS[key].color;
+    const start = i * slice;
+    const end = (i + 1) * slice;
+    gradientParts.push(`${color} ${start}deg ${end}deg`);
+  });
+
+  wheel.style.background = `conic-gradient(${gradientParts.join(', ')})`;
 }
 
 // ---------- Glücksrad ----------
