@@ -516,3 +516,101 @@ button:focus, a:focus {
 .wheel-pointer.spin-tick {
   animation: tick 0.3s ease-in-out 3;
 }
+
+/* Glücksrad-Wrapper */
+.wheel-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+/* Neuer Hintergrundkreis */
+.wheel-bg {
+  position: absolute;
+  width: 320px;   /* etwas größer als das Rad */
+  height: 320px;
+  border-radius: 50%;
+  background: #2F52A0; /* Carmen-Blau */
+  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+  z-index: 0;
+}
+
+/* Container fürs Rad */
+.wheel-container {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+}
+
+/* Das Rad selbst */
+.wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+
+  /* Wird dynamisch per JS gesetzt */
+  background: conic-gradient(#ddd, #bbb);
+
+  /* Plastizität */
+  box-shadow:
+    inset 0 0 25px rgba(0,0,0,0.25),
+    0 8px 20px rgba(0,0,0,0.4);
+  border: 6px solid #444;
+}
+
+/* Glanz-Effekt */
+.wheel::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.3), transparent 70%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Mitte mit Logo */
+.wheel-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: white;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+.wheel-center img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
+
+/* Fester Zeiger */
+.wheel-pointer {
+  position: absolute;
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%) rotate(180deg);
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-right: 16px solid transparent;
+  border-top: 24px solid #444;
+  z-index: 4;
+}
