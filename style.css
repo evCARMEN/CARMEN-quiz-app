@@ -459,3 +459,60 @@ button:focus, a:focus {
 .pointer.spin-tick {
   animation: tick 0.3s ease-in-out 3;
 }
+.wheel-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wheel-container {
+  position: relative;
+  width: 300px;   /* gleiche Größe wie dein Rad */
+  height: 300px;
+}
+
+.wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+
+.wheel-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;   /* Größe des Logos */
+  height: 70px;
+  border-radius: 50%;
+  background: white; /* damit es sich sauber abhebt */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+
+.wheel-center img {
+  max-width: 60%;
+  max-height: 60%;
+}
+
+.wheel-pointer {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid #222;
+  z-index: 10;
+}
+
+.wheel-pointer.spin-tick {
+  animation: tick 0.3s ease-in-out 3;
+}
