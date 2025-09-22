@@ -872,3 +872,32 @@ button:focus, a:focus {
   opacity: 1;
   transform: scale(1);
 }
+
+.extra-hint {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #f5f7fb;
+  text-align: center;
+  font-size: 1rem;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.extra-hint.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hint-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .6rem;
+}
+
+.hint-icon {
+  width: 28px;
+  height: 28px;
+}
