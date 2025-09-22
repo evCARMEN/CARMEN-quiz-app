@@ -5,7 +5,7 @@
     "answers": [
       { "text": "5H-Regel", "correct": false },
       { "text": "10H-Regel", "correct": true },
-      { "text": "2H-Regel", "correct": false }
+      { "text": "5G-Regel", "correct": false }
     ],
     "source": "https://www.carmen-ev.de/infothek/windenergie/"
   },
@@ -59,7 +59,7 @@
     "answers": [
       { "text": "Niedersachsen", "correct": true },
       { "text": "Bayern", "correct": false },
-      { "text": "Saarland", "correct": false }
+      { "text": "Mordor", "correct": false }
     ],
     "source": "https://www.carmen-ev.de/infothek/windenergie/"
   },
@@ -134,6 +134,15 @@
       { "text": "Stahlkonstruktion", "correct": false }
     ],
     "source": "https://www.carmen-ev.de/infothek/windenergie/"
+  }
+     {
+    "question": "Was ist einer der Gründe, warum sich besonders Wirtschaftswälder (für Holzgewinnung) für Windenergieprojekte eignen?",
+    "answers": [
+      { "text": "Straßen- und Wegenetz schafft meist gute Voraussetzungen für die Bau- und Betriebsphase", "correct": true },
+      { "text": "Borkenkäfer werden von Windkraftanlagen erschlagen", "correct": false },
+      { "text": "Infraschall fördert schnelleres Baumwachstum", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/wp-content/uploads/2025/09/Windenergie-im-Wald-2025.pdf"
   }
 ],
 
@@ -279,6 +288,7 @@
     ],
     "source": "https://www.carmen-ev.de/infothek/sonnenenergie/"
   }
+   
 ],
 
 
