@@ -614,3 +614,25 @@ button:focus, a:focus {
   border-top: 24px solid #444;
   z-index: 4;
 }
+
+.wheel-container {
+  position: relative;
+  width: 220px;   /* Größe des Rads */
+  height: 220px;
+  margin: 0 auto;
+}
+
+.wheel-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;   /* etwas größer als das Glücksrad */
+  height: 250px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+
+  /* Tiefe durch Verlauf + Schatten */
+  background: radial-gradient(circle at 30% 30%, #3f6ed1, #2F52A0 70%, #1d3569);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
