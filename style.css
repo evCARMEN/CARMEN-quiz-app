@@ -716,3 +716,83 @@ button:focus, a:focus {
   background: radial-gradient(circle at 30% 30%, #3f6ed1, #2F52A0 70%, #1d3569);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
 }
+
+/* ==============================
+   Glücksrad – Responsive & Plastisch
+   ============================== */
+
+.wheel-container {
+  position: relative;
+  width: clamp(220px, 35vw, 360px);
+  height: clamp(220px, 35vw, 360px);
+  margin: 0 auto 40px; /* Abstand zum Button */
+}
+
+.wheel-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(clamp(220px, 35vw, 360px) + 40px);
+  height: calc(clamp(220px, 35vw, 360px) + 40px);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+
+  background: radial-gradient(circle at 30% 30%, #3f6ed1, #2F52A0 70%, #1d3569);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--wind) 0 45deg,
+    var(--sun) 45deg 90deg,
+    var(--heat) 90deg 135deg,
+    var(--eff) 135deg 180deg,
+    var(--biogas) 180deg 225deg,
+    var(--wood) 225deg 270deg,
+    var(--mat) 270deg 315deg,
+    var(--sust) 315deg 360deg
+  );
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.wheel-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.wheel-center img {
+  width: 80%;
+  height: auto;
+  display: block;
+}
+
+/* Fester Pointer */
+.wheel-pointer {
+  position: absolute;
+  top: -8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: clamp(12px, 2.5vw, 18px) solid transparent;
+  border-right: clamp(12px, 2.5vw, 18px) solid transparent;
+  border-bottom: clamp(20px, 4vw, 28px) solid #222;
+  z-index: 3;
+}
