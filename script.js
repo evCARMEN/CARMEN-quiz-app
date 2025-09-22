@@ -437,54 +437,6 @@ function shuffle(arr){
   return arr;
 }
 
-// --- Glücksrad Pulsieren stoppen ---
-const wheelBackground = document.querySelector('.wheel-background');
-
-if (wheelBackground && spinBtn) {
-  spinBtn.addEventListener('click', () => {
-    wheelBackground.classList.add('active');
-  });
-}
-
-// --- Kategorie Glow nach Drehung ---
-// Stelle sicher, dass du weißt, welche Kategorie gewonnen hat
-function highlightCategory(categoryId) {
-  const button = document.getElementById(categoryId);
-  if (button) {
-    button.classList.add('glow');
-    setTimeout(() => button.classList.remove('glow'), 1500);
-  }
-}
-
-// --- Score animiert hochzählen ---
-function animateScore(finalScore) {
-  const scoreEl = document.getElementById('score');
-  let current = 0;
-  const step = Math.max(1, Math.floor(finalScore / 30)); // Geschwindigkeit
-  const interval = setInterval(() => {
-    current += step;
-    if (current >= finalScore) {
-      current = finalScore;
-      clearInterval(interval);
-    }
-    scoreEl.textContent = `Dein Ergebnis: ${current} Punkte`;
-  }, 30);
-}
-
-// --- Feedback sichtbar machen ---
-function showFeedback(text) {
-  const feedbackEl = document.getElementById('feedback');
-  feedbackEl.textContent = text;
-  feedbackEl.classList.add('visible');
-}
-
-// --- Extra-Hint sichtbar machen ---
-function showExtraHint(text) {
-  const hintEl = document.getElementById('extra-hint');
-  hintEl.textContent = text;
-  hintEl.classList.add('visible');
-}
-
 /* ==============================
    ➕ So erweiterst du den Fragenpool auf 18+/Kategorie:
    - Suche in QUESTION_BANK die gewünschte Kategorie (z. B. wind) und füge weitere
@@ -493,3 +445,18 @@ function showExtraHint(text) {
    - Nutze als Quelle bitte die entsprechende Seite auf www.carmen-ev.de.
    - Antworten werden bei jeder Anzeige neu gemischt.
    ==============================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
