@@ -439,7 +439,6 @@ function shuffle(arr){
 
 // --- Glücksrad Pulsieren stoppen ---
 const wheelBackground = document.querySelector('.wheel-background');
-const spinBtn = document.getElementById('spin-btn');
 
 if (wheelBackground && spinBtn) {
   spinBtn.addEventListener('click', () => {
