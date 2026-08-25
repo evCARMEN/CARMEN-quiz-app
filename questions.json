@@ -698,7 +698,7 @@
     "question": "Wie lässt sich ein E-Fahrzeug kostengünstig betreiben?",
     "answers": [
       { "text": "Durch das Aufladen mit Solar-Eigenstrom", "correct": true },
-      { "text": "Durch die Nutzung von Schnellladeunkten entlang der Autobahn", "correct": false },
+      { "text": "Durch die Nutzung von Schnellladepunkten entlang der Autobahn", "correct": false },
       { "text": "Durch das Laden über den Zigarettenanzünder", "correct": false }
     ],
     "source": "https://www.carmen-ev.de/service/faqten/faq/"
