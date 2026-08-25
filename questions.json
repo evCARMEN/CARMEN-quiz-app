@@ -598,7 +598,7 @@
   {
     "question": "Welche Einsatzstoffe sind in landwirtschaftlichen Biogasanlagen typisch?",
     "answers": [
-      { "text": "Gülle und Energiepflanzen", "correct": true },
+      { "text": "Gülle, Mist, Koppelprodukte und Energiepflanzen", "correct": true },
       { "text": "Steinkohle", "correct": false },
       { "text": "Kerosin", "correct": false }
     ],
@@ -607,16 +607,16 @@
   {
     "question": "Wofür kann aufbereitetes Biomethan verwendet werden?",
     "answers": [
-      { "text": "Als Kraftstoff (CNG/CBG) oder zur Einspeisung in das Erdgasnetz", "correct": true },
+      { "text": "Als Kraftstoff (CNG/LNG) oder zur Einspeisung in das Erdgasnetz", "correct": true },
       { "text": "Direkt als Rohbenzin fürs Flugzeug ohne Aufbereitung", "correct": false },
       { "text": "Als Lebensmittel", "correct": false }
     ],
     "source": "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
   },
   {
-    "question": "Wie werden Gärreste aus Biogasanlagen meist genutzt?",
+    "question": "Wie wird Gärprodukt aus Biogasanlagen meist genutzt?",
     "answers": [
-      { "text": "Als Dünger/Wirtschaftsdünger auf Feldern", "correct": true },
+      { "text": "Als Dünger auf Feldern", "correct": true },
       { "text": "Als Trinkwasser", "correct": false },
       { "text": "Als Verpackungsmaterial", "correct": false }
     ],
@@ -625,25 +625,16 @@
   {
     "question": "Gibt es pauschale, bedingungslose Investitionszuschüsse für Biogasanlagen?",
     "answers": [
-      { "text": "Nein, Zuschüsse sind meist zweckgebunden und an Bedingungen geknüpft", "correct": true },
+      { "text": "Nein, Zuschüsse sind immer zweckgebunden und an Bedingungen geknüpft", "correct": true },
       { "text": "Ja, immer für jede Anlage", "correct": false },
       { "text": "Nur für Anlagen unter 1 kW", "correct": false }
     ],
     "source": "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
   },
   {
-    "question": "Was ist Co‑Vergärung in Biogasanlagen?",
+    "question": "Welche Sicherheitsthemen sind bei Biogasanlagen relevant?",
     "answers": [
-      { "text": "Gleichzeitige Vergärung verschiedener Substrate zur Optimierung der Gasproduktion", "correct": true },
-      { "text": "Verbrennung von Biogas in Co‑Kesseln", "correct": false },
-      { "text": "Ein separates Abfalllager außerhalb der Anlage", "correct": false }
-    ],
-    "source": "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
-  },
-  {
-    "question": "Welche Sicherheitsthemen werden bei Biogasanlagen häufig behandelt?",
-    "answers": [
-      { "text": "Explosions- und Hygienerisiken sowie Lagerungssicherheit", "correct": true },
+      { "text": "Brand- und Explosionsschutz", "correct": true },
       { "text": "Nur Brandschutz bei großen Anlagen", "correct": false },
       { "text": "Keine speziellen Sicherheitsanforderungen", "correct": false }
     ],
@@ -661,7 +652,7 @@
   {
     "question": "Was ist eine mögliche Weiterverwendung von Biogas vor Ort?",
     "answers": [
-      { "text": "Betrieb eines Blockheizkraftwerks (KWK) zur Strom‑ und Wärmeversorgung", "correct": true },
+      { "text": "Betrieb eines Blockheizkraftwerks zur Strom‑ und Wärmeversorgung", "correct": true },
       { "text": "Direktes Einspeisen in Trinkwasserleitungen", "correct": false },
       { "text": "Verwendung als Baumaterial", "correct": false }
     ],
@@ -670,32 +661,23 @@
   {
     "question": "Warum kann die Aufbereitung von Biogas zu Biomethan sinnvoll sein?",
     "answers": [
-      { "text": "Um das Gas netz‑ oder fahrzeugtauglich zu machen", "correct": true },
+      { "text": "Um das Gas tauglich für die Erdgasleitung zu machen", "correct": true },
       { "text": "Um das Gas sofort zu trinken", "correct": false },
       { "text": "Um das Volumen zu verdoppeln", "correct": false }
     ],
     "source": "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
   },
-  {
-    "question": "Welche Umweltfrage ist bei Einsatz von Energiepflanzen für Biogas relevant?",
+   {
+    "question": "Welche Maßnahme verbessert die Akzeptanz von Biogasanlagen in der Region?",
     "answers": [
-      { "text": "Flächenkonkurrenz zur Nahrungsmittelproduktion und Biodiversität", "correct": true },
-      { "text": "Biogas verbraucht keine Energiepflanzen", "correct": false },
-      { "text": "Energiepflanzen sind immer die umweltfreundlichste Option", "correct": false }
-    ],
-    "source": "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
-  },
-  {
-    "question": "Welche Maßnahme verbessert die Akzeptanz von Biogasprojekten in der Region?",
-    "answers": [
-      { "text": "Transparente Information über Substrate und Emissionsschutzmaßnahmen", "correct": true },
+      { "text": "Information über Umwelt- und Sicherheitsmaßnahmen und Darstellung des Beitrags zum Energiesystem und zur regionalen Wertschöpfung", "correct": true },
       { "text": "Geheimhaltung der Betriebsdaten", "correct": false },
       { "text": "Verzicht auf jegliche Sicherheitsstandards", "correct": false }
     ],
     "source": "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
   },
   {
-    "question": "Wie lässt sich die Netzintegration von Biogas‑Kraftwerken zweckmäßig gestalten?",
+    "question": "Wo haben Biogasanlagen ihren Platz in der heutigen und künftigen Stromversorgung mit viel Wind- und Sonnenstrom",
     "answers": [
       { "text": "Durch Einsatz flexibler Betriebsstrategien und bedarfsgerechte Erzeugung", "correct": true },
       { "text": "Durch dauerhaftes Abschalten bei hoher Solarproduktion", "correct": false },
@@ -703,10 +685,46 @@
     ],
     "source": "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
   },
-  {
-    "question": "Welches Nebenprodukt entsteht bei der Vergärung und kann wirtschaftlich genutzt werden?",
+   {
+    "question": "Wie fährt man möglichst Spritsparend?",
     "answers": [
-      { "text": "Gärrest (als Wirtschaftsdünger)", "correct": true },
+      { "text": "Leerlauf und hohe Drehzahlen vermeiden, sowie vorausschauend und gelassen fahren", "correct": true },
+      { "text": "Zügig fahren, um möglichst schnell das Ziel zu erreichen", "correct": false },
+      { "text": "Immer in Richtung Sonne fahren", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/service/faqten/faq/"
+  },
+  {
+    "question": "Wie lässt sich ein E-Fahrzeug kostengünstig betreiben?",
+    "answers": [
+      { "text": "Durch das Aufladen mit Solar-Eigenstrom", "correct": true },
+      { "text": "Durch die Nutzung von Schnellladeunkten entlang der Autobahn", "correct": false },
+      { "text": "Durch das Laden über den Zigarettenanzünder", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/service/faqten/faq/"
+  },
+    {
+    "question": "Welche Energieform fällt bei der Stromproduktion durch ein Biogas-Blockheitzkraftwerk noch an?",
+    "answers": [
+      { "text": "Wärmeenergie, die z.B. in einem Wärmenetz zum Heizen von Gebäuden genutzt wird", "correct": true },
+      { "text": "Licht mit dem der landwirtschaftliche Hof beleuchtet wird", "correct": false },
+      { "text": "chemisch/stofflich gespeicherte Energie, die von Tieren im Futter verwertet werden kann", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+  },
+  {
+    "question": "Zu welchen Tageszeiten ist die flexible Stromproduktion durch Biogas in der Regel besonders sinnvoll?",
+    "answers": [
+      { "text": "zu den Morgen und Abendstunden", "correct": true },
+      { "text": "mittags", "correct": false },
+      { "text": "nachts", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/service/faqten/faq/faq-biogas/"
+  },
+   {
+    "question": "Welches Nebenprodukt entsteht bei der Vergärung und wird wirtschaftlich genutzt?",
+    "answers": [
+      { "text": "Gärrest", "correct": true },
       { "text": "Kohleasche", "correct": false },
       { "text": "Flüssiger Asphalt", "correct": false }
     ],
