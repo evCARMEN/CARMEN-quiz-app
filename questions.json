@@ -280,6 +280,105 @@
     "source": "https://www.carmen-ev.de/infothek/sonnenenergie/photovoltaik/"
   },
   {
+    "question": "Welche typische Lebensdauer haben moderne PV-Module?",
+    "answers": [
+      { "text": "25 - 30 Jahre", "correct": true },
+      { "text": "5 - 10 Jahre", "correct": false },
+      { "text": "45 - 50 Jahre", "correct": false }
+    ],
+    "source": "https://www.pv-wissen.de/pv-modultypen-im-ueberblick/#bifaziale-pv-module"
+  },
+{
+    "question": "Aus welchem Material bestehen moderne Photovoltaik-Zellen hauptsächlich?",
+    "answers": [
+      { "text": "Silizium", "correct": true },
+      { "text": "Blei", "correct": false },
+      { "text": "Lithium", "correct": false }
+    ],
+    "source": "https://www.pv-wissen.de/uberblick-der-solarzelltypen/"
+  },
+{
+    "question": "Was ist ein typischer Gesamt-Wirkungsgrad eines Lithium-Ionen-Batteriespeichers im Eigenheim?",
+    "answers": [
+      { "text": "ca. 80 %", "correct": true },
+      { "text": "über 95 %", "correct": false },
+      { "text": "ca. 50 %", "correct": false }
+    ],
+    "source": "https://solar.htw-berlin.de/studien/stromspeicher-inspektion-2026/"
+  },
+{
+    "question": "Wie lange dauert es ungefähr, bis eine PV-Anlage in Deutschland mehr Strom erzeugt hat, als für deren Produktion aufgewendet wurde?",
+    "answers": [
+      { "text": "1,2 Jahre", "correct": true },
+      { "text": "4,5 Jahre", "correct": false },
+      { "text": "7,3 Jahre", "correct": false }
+    ],
+    "source": "https://www.ise.fraunhofer.de/de/veroeffentlichungen/studien/photovoltaics-report.html"
+  },
+{
+    "question": "Wie kann die Eigenstromversorgung aus einer PV-Anlage optimiert werden?",
+    "answers": [
+      { "text": "Mit Energiemanagementsystemen und Batteriespeichern", "correct": true },
+      { "text": "Mit Nachtspeicheröfen", "correct": false },
+      { "text": "Mit einem dynamischen Stromtarif", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/wp-content/uploads/2026/03/Photovoltaikanlagen.pdf"
+  },
+{
+    "question": "Welchen Einfluss haben hohe Temperaturen auf eine PV-Anlage?",
+    "answers": [
+      { "text": "Der Wirkungsgrad der Anlage sinkt mit steigenden Temperaturen.", "correct": true },
+      { "text": "Die Leistung der Anlage steigt mit zunehmender Zelltemperatur.", "correct": false },
+      { "text": "Die elektrische Spannung nimmt bei höheren Temperaturen zu, was die Effizienz steigert.", "correct": false }
+    ],
+    "source": "https://www.pv-wissen.de/elektrische-eigenschaften-von-solarzellen/#wirkungsgrad"
+  },
+{
+    "question": "Welche Fläche benötigen Photovoltaik-Module heute, um 3.000 kWh Strom pro Jahr zu erzeugen? (3.000 kWh reichen für 15.000 km Fahrstrecke mit einem E-Auto)",
+    "answers": [
+      { "text": "12 Quadratmeter", "correct": true },
+      { "text": "25 Quadratmeter", "correct": false },
+      { "text": "40 Quadratmeter", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/service/faqten/faq/faq-solarenergie/"
+  },
+{
+    "question": "Wie hoch sind typischerweise die Gestehungskosten für Strom aus einer PV-Anlage auf dem Eigenheim?",
+    "answers": [
+      { "text": "ca. 8 Cent/kWh", "correct": true },
+      { "text": "ca. 3 Cent/kWh", "correct": false },
+      { "text": "ca. 15 Cent/kWh", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/wp-content/uploads/2026/03/Photovoltaikanlagen.pdf"
+  },
+{
+    "question": "Wie hoch sind die ungefähren Kosten für das Beladen eines Elektroautos mit Strom aus der eigenen PV-Anlage pro 100 km Fahrstrecke?",
+    "answers": [
+      { "text": "etwa 2 €", "correct": true },
+      { "text": "etwa 6 €", "correct": false },
+      { "text": "etwa12 €", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/wp-content/uploads/2026/03/Photovoltaikanlagen.pdf"
+  },
+{
+    "question": "Wie hoch sind typischerweise die Gestehungskosten für Strom aus einer PV-Anlage auf dem Eigenheim?",
+    "answers": [
+      { "text": "ca. 8 Cent/kWh", "correct": true },
+      { "text": "ca. 3 Cent/kWh", "correct": false },
+      { "text": "ca. 15 Cent/kWh", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/wp-content/uploads/2026/03/Photovoltaikanlagen.pdf"
+  },  
+{
+    "question": "Was ist ein Balkonkraftwerk?",
+    "answers": [
+      { "text": "Eine kleine Photovoltaikanlage mit begrenzter Leistung, die über eine Steckdose angeschlossen werden kann.", "correct": true },
+      { "text": "Ein Batteriespeicher, der nur im Außenbereich wie z. B. am Balkon betrieben werden darf.", "correct": false },
+      { "text": "Photovoltaikmodule, die nur für die Montage an der Balkonbrüstung und nicht auf dem Dach zugelassen sind.", "correct": false }
+    ],
+    "source": "https://www.carmen-ev.de/wp-content/uploads/2025/04/Strom-erzeugen-mit-Balkonkraftwerken-1.pdf"
+  },
+  {
     "question": "Welcher Vorteil entsteht durch Kombination von PV und Solarthermie?",
     "answers": [
       { "text": "Sowohl Strom- als auch Wärmeerzeugung", "correct": true },
